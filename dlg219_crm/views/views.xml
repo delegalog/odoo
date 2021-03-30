@@ -19,7 +19,7 @@
                             </group>
                             <group name="group_right">
                                 <field name="name"/>
-                                <field name="notes" style="height:165px"/>
+                                <field name="notes" style="word-break: break-word;"/>
                                 <field name="done"/>
                                 <field name="image" widget="image"/>
                             </group>
