@@ -8,7 +8,7 @@
                     <sheet>
                         <div class="oe_button_box" name="button_box">
                             <button name="toggle_state" type="object" class="oe_stat_button"
-                                    string="Cambio realizado" icon="fa-play-circle"
+                                    string="Visita realizada" icon="fa-play-circle"
                             />
                         </div>
                         <group name="group_top">
@@ -36,7 +36,7 @@
                 <tree string="Visit">
                     <field name="customer"/>
                     <field name="name"/>
-                    <field name="notes" heigth= "50%%"/>
+                    <field name="notes"/>
                     <field name="type"/>
                     <field name="date"/>
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
