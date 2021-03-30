@@ -36,7 +36,7 @@
                 <tree string="Visit">
                     <field name="customer"/>
                     <field name="name"/>
-                    <field name="notes" style="white-space: normal;word-break: break-word;"/>
+                    <field name="notes"/>
                     <field name="type"/>
                     <field name="date"/>
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
