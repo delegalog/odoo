@@ -19,7 +19,7 @@
                             </group>
                             <group name="group_right">
                                 <field name="name"/>
-                                <field name="notes" style="height: 50%%; white-space: normal;word-break: break-word;"/>
+                                <field name="notes" style="height: 40%%; white-space: normal;word-break: break-word;"/>
                                 <field name="done"/>
                                 <field name="image" widget="image"/>
                             </group>
@@ -53,7 +53,7 @@
                 <kanban class="o_custom_crm_visit_kanban">
                     <field name="id"/>
                     <field name="name"/>
-                    <field name="notes" style="white-space: normal;word-break: break-word;"/>
+                    <field name="notes" style="height: 40%%; white-space: normal;word-break: break-word;"/>
                     <field name="customer"/>
                     <field name="date"/>
                     <field name="type"/>
