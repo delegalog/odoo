@@ -9,9 +9,10 @@ class Visit(models.Model):
     _description = 'Visit'
 
     name = fields.Char(string='Descripción')
+    notes = fields.Char(string='Notas')
     customer = fields.Many2one(string='Cliente', comodel_name='res.partner')
     date = fields.Datetime(string='Fecha')
-    type = fields.Selection([('P', 'Presencial'), ('W', 'WhatsApp'), ('T', 'Telefónico')], string='Tipo', required=True)
+    type = fields.Selection([('C', 'Call'), ('P', 'Presencial'), ('T', 'Telefónico')], string='Tipo', required=True)
     done = fields.Boolean(string='Realizada', readonly=True)
     image = fields.Binary(string='Imagen')
 
@@ -22,6 +23,7 @@ class Visit(models.Model):
     def f_create(self):
         visit = {
             'name': 'ORM test',
+            'notes': 'ORM test',
             'customer': 1,
             'date': str(datetime.date(2020, 8, 6)),
             'type': 'P',

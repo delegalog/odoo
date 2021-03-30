@@ -8,7 +8,7 @@
                     <sheet>
                         <div class="oe_button_box" name="button_box">
                             <button name="toggle_state" type="object" class="oe_stat_button"
-                                    string="Cambiar realizada" icon="fa-play-circle"
+                                    string="Cambio realizado" icon="fa-play-circle"
                             />
                         </div>
                         <group name="group_top">
@@ -19,6 +19,7 @@
                             </group>
                             <group name="group_right">
                                 <field name="name"/>
+                                <field name="notes"/>
                                 <field name="done"/>
                                 <field name="image" widget="image"/>
                             </group>
@@ -35,6 +36,7 @@
                 <tree string="Visit">
                     <field name="customer"/>
                     <field name="name"/>
+                    <field name="notes"/>
                     <field name="type"/>
                     <field name="date"/>
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
@@ -51,6 +53,7 @@
                 <kanban class="o_custom_crm_visit_kanban">
                     <field name="id"/>
                     <field name="name"/>
+                    <field name="notes"/>
                     <field name="customer"/>
                     <field name="date"/>
                     <field name="type"/>
@@ -86,6 +89,7 @@
             <field name="arch" type="xml">
                 <search string="Filtrar visitas">
                     <field name="name"/>
+                    <field name="notes"/>
                     <field name="customer"/>
                     <field name="type"/>
                     <field name="date"/>

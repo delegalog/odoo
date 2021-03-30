@@ -12,6 +12,9 @@
                             <p>Descripción:
                                 <span t-field="o.name"/>
                             </p>
+                            <p>Notas:
+                                <span t-field="o.notes"/>
+                            </p>
                             <p>Fecha:
                                 <span t-field="o.date" t-options='{"format": "dd/MM/yyyy"}' />
                             </p>
