@@ -9,7 +9,7 @@ class Visit(models.Model):
     _description = 'Visit'
 
     name = fields.Char(string='Descripción')
-    notes = fields.Char(string='Notas')
+    notes = fields.String(string='Notas')
     customer = fields.Many2one(string='Cliente', comodel_name='res.partner')
     date = fields.Datetime(string='Fecha')
     type = fields.Selection([('C', 'Call'), ('P', 'Presencial'), ('T', 'Telefónico')], string='Tipo', required=True)
