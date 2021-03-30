@@ -36,7 +36,7 @@
                 <tree string="Visit">
                     <field name="customer"/>
                     <field name="name"/>
-                    <field name="notes"/>
+                    <field name="notes" heigth= "50%%"/>
                     <field name="type"/>
                     <field name="date"/>
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
