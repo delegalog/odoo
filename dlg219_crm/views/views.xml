@@ -89,7 +89,7 @@
             <field name="arch" type="xml">
                 <search string="Filtrar visitas">
                     <field name="name"/>
-                    <field name="notes" style="white-space: normal;word-break: break-word;"/>
+                    <field name="notes"/>
                     <field name="customer"/>
                     <field name="type"/>
                     <field name="date"/>
