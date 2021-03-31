@@ -30,23 +30,6 @@
             </field>
         </record>
 
-        <record id="view_dlg_crm_opportunity_tree" model="ir.ui.view">
-            <field name="name">view.dlg.crm.opportunity.tree</field>
-            <field name="model">dlg_crm.opportunity</field>
-            <field name="arch" type="xml">
-                <tree string="Oportunidad">
-                    <field name="customer"/>
-                    <field name="name"/>
-                    <field name="type"/>
-                    <field name="status"/>
-                    <field name="date"/>
-                    <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
-                    <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
-                    <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
-                </tree>
-            </field>
-        </record>
-
         <record id="view_dlg_crm_opportunity_kanban" model="ir.ui.view">
             <field name="name">view.dlg.crm.opportunity.kanban</field>
             <field name="model">dlg_crm.opportunity</field>
@@ -88,6 +71,24 @@
             </field>
         </record>
 
+
+        <record id="view_dlg_crm_opportunity_tree" model="ir.ui.view">
+            <field name="name">view.dlg.crm.opportunity.tree</field>
+            <field name="model">dlg_crm.opportunity</field>
+            <field name="arch" type="xml">
+                <tree string="Oportunidad">
+                    <field name="customer"/>
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="status"/>
+                    <field name="date"/>
+                    <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
+                    <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
+                    <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
+                </tree>
+            </field>
+        </record>
+        
         <record id="view_dlg_crm_opportunity_search" model="ir.ui.view">
             <field name="name">view.dlg.crm.opportunity.search</field>
             <field name="model">dlg_crm.opportunity</field>
@@ -100,6 +101,8 @@
                     <field name="status"/>
                     <field name="date"/>
                     <group expand="0" string="Group By">
+                        <filter name="groupby_type" string="Status" domain="[]" context="{'group_by':'status'}"
+                                help="Agrupar por situación"/>
                         <filter name="groupby_type" string="Tipo" domain="[]" context="{'group_by':'type'}"
                                 help="Agrupar por tipo"/>
                         <filter name="groupby_date" string="Fecha" context="{'group_by':'date:year'}"
