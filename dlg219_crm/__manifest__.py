@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "dlg219_crm",
+    'name': "dlg_crm",
 
     'summary': """
         Módulo CRM para la gestión de visitas""",
