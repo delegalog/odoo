@@ -5,8 +5,8 @@ import datetime
 
 
 class Opportunity(models.Model):
-    _name = 'dlg_crm.visit'
-    _description = 'Visit'
+    _name = 'dlg_crm.opportunity'
+    _description = 'Opportunity'
 
     name = fields.Char(string='Descripción')
     notes = fields.Text(string='Notas')
@@ -14,6 +14,7 @@ class Opportunity(models.Model):
     date = fields.Datetime(string='Fecha')
     type = fields.Selection([('C', 'Call'), ('P', 'Presencial'), ('T', 'Telefónico')], string='Tipo', required=True)
     done = fields.Boolean(string='Realizada', readonly=True)
+    status = fields.Selection([('0', 'Lead'), ('1', 'Contactado'), ('2', 'En espera'), ('3', 'En curso'), ('4', 'Conseguido!')], string='Tipo', required=True)
     image = fields.Binary(string='Imagen')
 
     def toggle_state(self):
@@ -26,17 +27,18 @@ class Opportunity(models.Model):
             'notes': 'ORM test',
             'customer': 1,
             'date': str(datetime.date(2020, 8, 6)),
-            'type': 'P',
+            'type': 'C',
+            'status': '0',
             'done': False
         }
         print(opportunity)
-        self.env['dlg_crm.visit'].create(opportunity)
+        self.env['dlg_crm.opportunity'].create(opportunity)
 
     def f_search_update(self):
-        opportunity = self.env['dlg_crm.visit'].search([('name', '=', 'ORM test')])
+        opportunity = self.env['dlg_crm.opportunity'].search([('name', '=', 'ORM test')])
         print('search()', opportunity, opportunity.name)
 
-        opportunity_b = self.env['dlg_crm.visit'].browse([8])
+        opportunity_b = self.env['dlg_crm.opportunity'].browse([8])
         print('browse()', opportunity_b, opportunity_b.name)
 
         opportunity.write({
@@ -44,26 +46,26 @@ class Opportunity(models.Model):
         })
 
     def f_delete(self):
-        opportunity = self.env['dlg_crm.visit'].browse([8])
+        opportunity = self.env['dlg_crm.opportunity'].browse([8])
         opportunity.unlink()
 
 
 class OpportunityReport(models.AbstractModel):
 
-    _name = 'report.dlg_crm.report_visit_card'
+    _name = 'report.dlg_crm.report_opportunity_card'
 
     @api.model
     def _get_report_values(self, docids, data=None):
         report_obj = self.env['ir.actions.report']
-        report = report_obj._get_report_from_name('dlg_crm.report_visit_card')
+        report = report_obj._get_report_from_name('dlg_crm.report_opportunity_card')
         return {
             'doc_ids': docids,
-            'doc_model': self.env['dlg_crm.visit'],
-            'docs': self.env['dlg_crm.visit'].browse(docids)
+            'doc_model': self.env['dlg_crm.opportunity'],
+            'docs': self.env['dlg_crm.opportunity'].browse(docids)
         }
 
 
-class CustomSaleOrder(models.Model):
+class DlgSaleOrder(models.Model):
 
     _inherit = 'sale.order'
 

@@ -1,7 +1,7 @@
 <odoo>
     <data>
-        <record id="visit0" model="dlg_crm.visit">
-            <field name="name">Visita importada</field>
+        <record id="opportunity0" model="dlg_crm.opportunity">
+            <field name="name">Oportunidad importada</field>
             <field name="customer">Cliente importado</field>
             <field name="date">2020-01-01</field>
             <field name="type">P</field>

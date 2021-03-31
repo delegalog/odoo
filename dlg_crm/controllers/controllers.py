@@ -6,8 +6,8 @@ import json
 
 class OpportunityController(http.Controller):
 
-    @http.route('/api/opportunities', auth='public', method=['GET'], csrf=False)
-    def get_visits(self, **kw):
+    @http.route('/api/visits', auth='public', method=['GET'], csrf=False)
+    def get_opportunities(self, **kw):
         try:
             opportunities = http.request.env['dlg_crm.opportunity'].sudo().search_read([], ['id', 'name', 'customer', 'done'])
             res = json.dumps(opportunities, ensure_ascii=False).encode('utf-8')
