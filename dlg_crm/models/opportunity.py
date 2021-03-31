@@ -68,5 +68,4 @@ class OpportunityReport(models.AbstractModel):
 class DlgSaleOrder(models.Model):
 
     _inherit = 'sale.order'
-
     zone = fields.Selection([('N', 'Norte'), ('C', 'Centro'), ('S', 'Sur')], string='Zona comercial')
