@@ -30,8 +30,8 @@
         </record>
 
         <record id="view_dlg_crm_opportunity_tree" model="ir.ui.view">
-            <field name="name">view.dlg.crm.visit.tree</field>
-            <field name="model">dlg_crm.visit</field>
+            <field name="name">view.dlg.crm.opportunity.tree</field>
+            <field name="model">dlg_crm.opportunity</field>
             <field name="arch" type="xml">
                 <tree string="Oportunidad">
                     <field name="customer"/>
@@ -46,8 +46,8 @@
         </record>
 
         <record id="view_dlg_crm_opportunity_kanban" model="ir.ui.view">
-            <field name="name">view.dlg.crm.visit.kanban</field>
-            <field name="model">dlg_crm.visit</field>
+            <field name="name">view.dlg.crm.opportunity.kanban</field>
+            <field name="model">dlg_crm.opportunity</field>
             <field name="arch" type="xml">
                 <kanban class="o_dlg_crm_opportunity_kanban">
                     <field name="id"/>
@@ -83,8 +83,8 @@
         </record>
 
         <record id="view_dlg_crm_opportunity_search" model="ir.ui.view">
-            <field name="name">view.dlg.crm.visit.search</field>
-            <field name="model">dlg_crm.visit</field>
+            <field name="name">view.dlg.crm.opportunity.search</field>
+            <field name="model">dlg_crm.opportunity</field>
             <field name="arch" type="xml">
                 <search string="Filtrar oportunidades">
                     <field name="name"/>
@@ -105,16 +105,16 @@
         </record>
 
         <record id="action_dlg_crm_opportunity_view" model="ir.actions.act_window">
-            <field name="name">Visita</field>
+            <field name="name">Oportunidad</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">dlg_crm.visit</field>
+            <field name="res_model">dlg_crm.opportunity</field>
             <field name="view_mode">tree,form,kanban</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
-                    Visitas
+                    Oportunidad
                 </p>
                 <p>
-                    Click 'Nuevo' para añadir nuevos elementos
+                    Click 'Nueva' para añadir nuevas oportunidades
                 </p>
             </field>
         </record>
@@ -133,9 +133,9 @@
 
         <menuitem id="menu_dlg_crm_root" name="dlg219 CRM" sequence="10"/>
 
-        <menuitem id="menu_dlg_crm_visit_categ" name="Operaciones" parent="menu_dlg_crm_root" sequence="0"/>
+        <menuitem id="menu_dlg_crm_opportunity_categ" name="Operaciones" parent="menu_dlg_crm_root" sequence="0"/>
 
-        <menuitem id="menu_dlg_crm_visit" name="Oportunidades" parent="menu_dlg_crm_opportunity_categ" sequence="0"
+        <menuitem id="menu_dlg_crm_opportunity" name="Oportunidades" parent="menu_dlg_crm_opportunity_categ" sequence="0"
                   action="action_dlg_crm_opportunity_view"/>
     </data>
 </odoo>
