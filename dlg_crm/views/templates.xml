@@ -27,4 +27,24 @@
             </t>
         </template>
     </data>
+
+    <data>
+        <template id="report_phase_card">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h2>Fase</h2>
+                            <p>ID:
+                                <span t-field="o.id"/>
+                            </p>
+                            <p>Nombre:
+                                <span t-field="o.name"/>
+                            </p>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
 </odoo>

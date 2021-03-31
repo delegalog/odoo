@@ -8,4 +8,10 @@
             <field name="done">1</field>
         </record>
     </data>
+    <data>
+        <record id="phase0" model="dlg_crm.phase">
+            <field name="name">Fase importada</field>
+            <field name="id">Fase id importada</field>
+        </record>
+    </data>
 </odoo>
