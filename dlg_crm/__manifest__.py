@@ -9,7 +9,7 @@
         Módulo CRM para la gestión de visitas...
     """,
 
-    'author': "DLG219",
+    'author': "dlg219",
     'website': "http://www.delegalog.com",
 
     # Categories can be used to filter modules in modules listing
@@ -26,7 +26,7 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'reports/visit.xml'
+        'reports/opportunity.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

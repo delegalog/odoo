@@ -4,7 +4,7 @@ from odoo import models, fields, api
 import datetime
 
 
-class Visit(models.Model):
+class Opportunity(models.Model):
     _name = 'dlg_crm.visit'
     _description = 'Visit'
 
@@ -21,7 +21,7 @@ class Visit(models.Model):
 
     #ORM
     def f_create(self):
-        visit = {
+        opportunity = {
             'name': 'ORM test',
             'notes': 'ORM test',
             'customer': 1,
@@ -29,28 +29,28 @@ class Visit(models.Model):
             'type': 'P',
             'done': False
         }
-        print(visit)
-        self.env['dlg_crm.visit'].create(visit)
+        print(opportunity)
+        self.env['dlg_crm.visit'].create(opportunity)
 
     def f_search_update(self):
-        visit = self.env['dlg_crm.visit'].search([('name', '=', 'ORM test')])
-        print('search()', visit, visit.name)
+        opportunity = self.env['dlg_crm.visit'].search([('name', '=', 'ORM test')])
+        print('search()', opportunity, opportunity.name)
 
-        visit_b = self.env['dlg_crm.visit'].browse([8])
-        print('browse()', visit_b, visit_b.name)
+        opportunity_b = self.env['dlg_crm.visit'].browse([8])
+        print('browse()', opportunity_b, opportunity_b.name)
 
-        visit.write({
+        opportunity.write({
             'name': 'ORM test write'
         })
 
     def f_delete(self):
-        visit = self.env['dlg_crm.visit'].browse([8])
-        visit.unlink()
+        opportunity = self.env['dlg_crm.visit'].browse([8])
+        opportunity.unlink()
 
 
-class VisitReport(models.AbstractModel):
+class OpportunityReport(models.AbstractModel):
 
-    _name='report.dlg_crm.report_visit_card'
+    _name = 'report.dlg_crm.report_visit_card'
 
     @api.model
     def _get_report_values(self, docids, data=None):
