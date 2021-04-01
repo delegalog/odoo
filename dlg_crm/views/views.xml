@@ -246,7 +246,7 @@
 
         <menuitem id="menu_dlg_crm_categ" name="Operaciones" parent="menu_dlg_crm_root" sequence="0"/>
 
-        <menuitem id="menu_dlg_crm_opportunity" name="Oportunidades" parent="menu_dlg_crm_categ" sequence="0"
+        <menuitem id="menu_dlg_crm_opportunity" name="Oportunidades" parent="menu_dlg_crm_categ" sequence="1"
                   action="action_dlg_crm_opportunity_view"/>
 
         <menuitem id="menu_dlg_crm_phase" name="Fases" parent="menu_dlg_crm_categ" sequence="0"
