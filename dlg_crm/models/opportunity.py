@@ -12,9 +12,11 @@ class Opportunity(models.Model):
     notes = fields.Text(string='Notas')
     customer = fields.Many2one(string='Cliente', comodel_name='res.partner')
     date = fields.Datetime(string='Fecha')
-    type = fields.Selection([('C', 'Call'), ('P', 'Presencial'), ('T', 'Telefónico'), ('G', '-')], string='Tipo', required=True)
+    type = fields.Selection([('C', 'Call'), ('P', 'Presencial'), ('T', 'Telefónico'),
+                             ('G', '-')], string='Tipo', required=True)
     done = fields.Boolean(string='Realizada', readonly=True)
-    status = fields.Selection([('0', 'Lead'), ('1', 'Contactado'), ('2', 'En espera'), ('3', 'En curso'), ('4', 'Conseguido!')], string='Situación', required=True)
+    status = fields.Selection([('0', 'Lead'), ('1', 'Contactado'), ('2', 'En espera'),
+                               ('3', 'En curso'), ('4', 'Conseguido!')], string='Situación', required=True)
     image = fields.Binary(string='Imagen')
 
     def toggle_state(self):
