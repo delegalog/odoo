@@ -1,4 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import opportunities
-from . import phases
+from . import opportunity
+from . import phase
