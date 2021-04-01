@@ -5,7 +5,7 @@ import datetime
 
 
 class Phase(models.Model):
-    _name = 'dlg_crm.status'
+    _name = 'dlg_crm.phase'
     _description = 'Phase'
 
     id = fields.Char(string='ID')
