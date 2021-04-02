@@ -6,11 +6,6 @@
             <field name="arch" type="xml">
                 <form string="Fase">
                     <sheet>
-                        <div class="oe_button_box" name="button_box">
-                            <button name="toggle_phase" type="object" class="oe_stat_button"
-                                    string="Fase creada" icon="fa-play-circle"
-                            />
-                        </div>
                         <group name="group_top">
                             <group name="group_left">
                                 <field name="id"/>
