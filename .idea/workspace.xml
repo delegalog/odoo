@@ -6,7 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cee65ad8-7cfb-4a9d-95d0-64930dd53c67" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dlg_crm/controllers/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_crm/controllers/controllers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dlg_crm/manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dlg_crm/manager.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dlg_crm/manager_report.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_crm/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_crm/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_crm/models/manager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_crm/models/opportunity.py" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_crm/models/opportunity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_crm/reports/manager.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_crm/views/manager.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
