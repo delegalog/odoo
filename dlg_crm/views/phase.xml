@@ -77,8 +77,6 @@
                         <filter name="groupby_type" string="Nombre" domain="[]" context="{'group_by':'name'}"
                                 help="Agrupar por nombre"/>
                     </group>
-                    <filter name="filter_by_done" string="Realizada" domain="[('done','=','True')]"
-                            help="Fases listas"/>
                 </search>
             </field>
         </record>
