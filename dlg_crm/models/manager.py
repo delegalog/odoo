@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-import phase, opportunity
 
 
 class Manager(models.Model):

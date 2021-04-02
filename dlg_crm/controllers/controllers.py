@@ -28,6 +28,7 @@ class PhaseController(http.Controller):
         except Exception as e:
             return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
 
+
 class ManagerController(http.Controller):
 
     @http.route('/api/manager', auth='public', method=['GET'], csrf=False)
