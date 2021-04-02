@@ -1,24 +1,23 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-import datetime
 
 
 class Phase(models.Model):
     _name = 'dlg_crm.phase'
     _description = 'Phase'
 
-    id = fields.Char(string='ID')
+    id = fields.Integer(string='ID')
     name = fields.Char(string='Nombre')
 
     #ORM
     def f_create(self):
-        status = {
+        phase = {
             'id': 'ORM test',
             'name': 'ORM test'
         }
-        print(status)
-        self.env['dlg_crm.phase'].create(status)
+        print(phase)
+        self.env['dlg_crm.phase'].create(phase)
 
     def f_search_update(self):
         phase = self.env['dlg_crm.phase'].search([('name', '=', 'ORM test')])
