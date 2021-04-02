@@ -7,7 +7,7 @@
                 <form string="Fase">
                     <sheet>
                         <div class="oe_button_box" name="button_box">
-                            <button name="toggle_state" type="object" class="oe_stat_button"
+                            <button name="toggle_phase" type="object" class="oe_stat_button"
                                     string="Fase creada" icon="fa-play-circle"
                             />
                         </div>
@@ -102,7 +102,7 @@
                 </p>
             </field>
         </record>
-        
+
         <menuitem id="menu_dlg_crm_phase" name="Fases" parent="menu_dlg_crm_root" action="action_dlg_crm_phase_view"/>
     </data>
 </odoo>
