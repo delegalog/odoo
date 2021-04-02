@@ -18,6 +18,7 @@ class Opportunity(models.Model):
     status = fields.Selection([('0', 'Lead'), ('1', 'Contactado'), ('2', 'En espera'),
                                ('3', 'En curso'), ('4', 'Conseguido!')], string='Situación', required=True)
     image = fields.Binary(string='Imagen')
+    phase_id = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
 
     def toggle_state(self):
         self.done = not self.done
@@ -31,7 +32,8 @@ class Opportunity(models.Model):
             'date': str(datetime.date(2020, 8, 6)),
             'type': 'C',
             'status': '0',
-            'done': False
+            'done': False,
+            'phase_id': 'LEAD'
         }
         print(opportunity)
         self.env['dlg_crm.opportunity'].create(opportunity)
@@ -65,9 +67,3 @@ class OpportunityReport(models.AbstractModel):
             'doc_model': self.env['dlg_crm.opportunity'],
             'docs': self.env['dlg_crm.opportunity'].browse(docids)
         }
-
-
-class DlgSaleOrder(models.Model):
-
-    _inherit = 'sale.order'
-    zone = fields.Selection([('N', 'Norte'), ('C', 'Centro'), ('S', 'Sur')], string='Zona comercial')
