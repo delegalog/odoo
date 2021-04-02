@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-import phase
+
 
 class Manager(models.Model):
     _name = 'dlg_crm.manager'
     _description = 'Manager'
 
-    phase_id = fields.one2many(phase.Phase.name, string='Fase', required=True)
-    #opportunity_id = fields.Selection(opportunity.Opportunity.opportunity.name, string='Oportunidad', required=True)
+    phase_id = fields.Many2one('dlg_crm.phase', string="Fase")
+    # opportunity_id = fields.Selection(opportunity.Opportunity.opportunity.name, string='Oportunidad', required=True)
     opportunity_id = fields.Selection(('0', 'Lead'), string='Oportunidad', required=True)
 
-    #ORM
+    # ORM
     def f_create(self):
         manager = {
             'phase_id': 'ORM test',
@@ -37,7 +37,6 @@ class Manager(models.Model):
 
 
 class ManagerReport(models.AbstractModel):
-
     _name = 'report.dlg_crm.report_phase_card'
 
     @api.model
