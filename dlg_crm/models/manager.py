@@ -1,15 +1,14 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-
+import phase
 
 class Manager(models.Model):
     _name = 'dlg_crm.manager'
     _description = 'Manager'
 
-    #phase_id = fields.Selection(phase.Phase.phase.id, string='Fase', required=True)
+    phase_id = fields.Selection(phase.Phase.phase.id, string='Fase', required=True)
     #opportunity_id = fields.Selection(opportunity.Opportunity.opportunity.name, string='Oportunidad', required=True)
-    phase_id = fields.Selection([('0', 'Lead')], string='Fase', required=True)
     opportunity_id = fields.Selection(('0', 'Lead'), string='Oportunidad', required=True)
 
     #ORM
