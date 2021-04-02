@@ -24,11 +24,11 @@
     # always loaded
     'data': [
         #'security/ir.model.access.csv',
-        'views/opportunity.xml',
         'views/phase.xml',
+        'views/opportunity.xml',
         'views/templates.xml',
-        'reports/opportunity.xml',
         'reports/phase.xml',
+        'reports/opportunity.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
