@@ -28,7 +28,7 @@
         #'views/phase.xml',
         'views/templates.xml',
         'reports/opportunity.xml',
-        #'reports/phase.xml',
+        'reports/phase.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
