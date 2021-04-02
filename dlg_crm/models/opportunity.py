@@ -15,8 +15,6 @@ class Opportunity(models.Model):
     type = fields.Selection([('C', 'Call'), ('P', 'Presencial'), ('T', 'Telefónico'),
                              ('G', '-')], string='Tipo', required=True)
     done = fields.Boolean(string='Realizada', readonly=True)
-    status = fields.Selection([('0', 'Lead'), ('1', 'Contactado'), ('2', 'En espera'),
-                               ('3', 'En curso'), ('4', 'Conseguido!')], string='Situación', required=True)
     image = fields.Binary(string='Imagen')
     phase = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
 
@@ -33,7 +31,7 @@ class Opportunity(models.Model):
             'type': 'C',
             'status': '0',
             'done': False,
-            'phase_id': ''
+            'phase_id': '1'
         }
         print(opportunity)
         self.env['dlg_crm.opportunity'].create(opportunity)
