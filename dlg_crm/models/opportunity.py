@@ -31,7 +31,7 @@ class Opportunity(models.Model):
             'type': 'C',
             'status': '0',
             'done': False,
-            'phase_id': '1'
+            'phase_id': 'LEAD'
         }
         print(opportunity)
         self.env['dlg_crm.opportunity'].create(opportunity)
