@@ -18,7 +18,7 @@ class Opportunity(models.Model):
     status = fields.Selection([('0', 'Lead'), ('1', 'Contactado'), ('2', 'En espera'),
                                ('3', 'En curso'), ('4', 'Conseguido!')], string='Situación', required=True)
     image = fields.Binary(string='Imagen')
-    phase_id = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
+    phase = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
 
     def toggle_state(self):
         self.done = not self.done

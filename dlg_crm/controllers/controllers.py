@@ -7,12 +7,12 @@ import json
 class OpportunityController(http.Controller):
 
     @http.route('/api/opportunity', auth='public', method=['GET'], csrf=False)
-    def get_opportunities(self, **kw):
+    def get_opportunity(self, **kw):
         try:
-            opportunities = http.request.env['dlg_crm.opportunity'].sudo().search_read([], ['id', 'name', 'customer',
-                                                                                            'notes', 'status', 'done',
-                                                                                            'phase_id'])
-            res = json.dumps(opportunities, ensure_ascii=False).encode('utf-8')
+            opportunity = http.request.env['dlg_crm.opportunity'].sudo().search_read([], ['id', 'name', 'customer',
+                                                                                          'notes', 'status', 'done',
+                                                                                          'phase'])
+            res = json.dumps(opportunity, ensure_ascii=False).encode('utf-8')
             return Response(res, content_type='application/json;charset=utf-8', status=200)
         except Exception as e:
             return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
@@ -21,7 +21,7 @@ class OpportunityController(http.Controller):
 class PhaseController(http.Controller):
 
     @http.route('/api/phase', auth='public', method=['GET'], csrf=False)
-    def get_phases(self, **kw):
+    def get_phase(self, **kw):
         try:
             phase = http.request.env['dlg_crm.phase'].sudo().search_read([], ['id', 'name'])
             res = json.dumps(phase, ensure_ascii=False).encode('utf-8')
@@ -33,10 +33,10 @@ class PhaseController(http.Controller):
 class ManagerController(http.Controller):
 
     @http.route('/api/manager', auth='public', method=['GET'], csrf=False)
-    def get_phases(self, **kw):
+    def get_manager(self, **kw):
         try:
-            phase = http.request.env['dlg_crm.manager'].sudo().search_read([], ['phase_id', 'opportunity_id'])
-            res = json.dumps(phase, ensure_ascii=False).encode('utf-8')
+            manager = http.request.env['dlg_crm.manager'].sudo().search_read([], ['phase_id', 'opportunity_id'])
+            res = json.dumps(manager, ensure_ascii=False).encode('utf-8')
             return Response(res, content_type='application/json;charset=utf-8', status=200)
         except Exception as e:
             return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
