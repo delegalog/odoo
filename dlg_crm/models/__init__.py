@@ -2,3 +2,4 @@
 
 from . import opportunity
 from . import phase
+from . import manager

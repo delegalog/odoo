@@ -1,0 +1,97 @@
+<odoo>
+    <data>
+        <record id="view_dlg_crm_manager_form" model="ir.ui.view">
+            <field name="name">view.dlg.crm.manager.form</field>
+            <field name="model">dlg_crm.manager</field>
+            <field name="arch" type="xml">
+                <form string="Registro">
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="phase_id"/>
+                                <field name="opportunity_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_dlg_crm_manager_kanban" model="ir.ui.view">
+            <field name="name">view.dlg.crm.manager.kanban</field>
+            <field name="model">dlg_crm.manager</field>
+            <field name="arch" type="xml">
+                <kanban class="o_dlg_crm_manager_kanban">
+                    <field name="phase_id"/>
+                    <field name="opportunity_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title">
+                                        <field name="phase_id"/>
+                                        <field name="opportunity_id"/>
+                                    </strong>
+                                    <div t-if="record.phase_id.value">
+                                        <t t-esc="record.phase_id.value"/>
+                                    </div>
+                                    <div t-if="record.opportunity_id.value">
+                                        <t t-esc="record.opportunity_id.value"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_dlg_crm_manager_tree" model="ir.ui.view">
+            <field name="name">view.dlg.crm.manager.tree</field>
+            <field name="model">dlg_crm.manager</field>
+            <field name="arch" type="xml">
+                <tree string="Registro">
+                    <field name="phase_id"/>
+                    <field name="opportunity_id"/>
+                    <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
+                    <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
+                    <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_dlg_crm_manager_search" model="ir.ui.view">
+            <field name="name">view.dlg.crm.manager.search</field>
+            <field name="model">dlg_crm.manager</field>
+            <field name="arch" type="xml">
+                <search string="Filtrar Registros">
+                    <field name="phase_id"/>
+                    <field name="opportunity_id"/>
+                    <group expand="0" string="Group By">
+                        <filter name="groupby_type" string="Fase" domain="[]" context="{'group_by':'phase_id'}"
+                                help="Agrupar por Fase"/>
+                        <filter name="groupby_type" string="Oportunidad" domain="[]" context="{'group_by':'opportunity_id'}"
+                                help="Agrupar por Oportunidad"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_dlg_crm_manager_view" model="ir.actions.act_window">
+            <field name="name">Registro</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">dlg_crm.manager</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Registro
+                </p>
+                <p>
+                    Click 'Nuevo' para añadir nuevos registros
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_dlg_crm_manager" name="Registros CRM" parent="menu_dlg_crm_root" action="action_dlg_crm_manager_view" sequence="0"/>
+    </data>
+</odoo>

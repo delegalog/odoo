@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+        <report
+            string="Informe manager"
+            id="dlg_crm_manager_report"
+            model="dlg_crm.manager"
+            report_type="qweb-pdf"
+            name="dlg_crm.report_manager_card"
+            file="dlg_crm.report_manager_card"
+            attachment_use="True"
+        />
+    </data>
+</odoo>

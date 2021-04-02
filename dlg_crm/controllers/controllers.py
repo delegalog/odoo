@@ -27,3 +27,14 @@ class PhaseController(http.Controller):
             return Response(res, content_type='application/json;charset=utf-8', status=200)
         except Exception as e:
             return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
+
+class ManagerController(http.Controller):
+
+    @http.route('/api/manager', auth='public', method=['GET'], csrf=False)
+    def get_phases(self, **kw):
+        try:
+            phase = http.request.env['dlg_crm.manager'].sudo().search_read([], ['phase_id', 'opportunity_id'])
+            res = json.dumps(phase, ensure_ascii=False).encode('utf-8')
+            return Response(res, content_type='application/json;charset=utf-8', status=200)
+        except Exception as e:
+            return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
