@@ -7,9 +7,8 @@ class Manager(models.Model):
     _name = 'dlg_crm.manager'
     _description = 'Manager'
 
-    phase_id = fields.Many2one('dlg_crm.phase', string="Fase")
-    # opportunity_id = fields.Selection(opportunity.Opportunity.opportunity.name, string='Oportunidad', required=True)
-    opportunity_id = fields.Selection(('0', 'Lead'), string='Oportunidad', required=True)
+    phase_id = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
+    opportunity_id = fields.Many2one('dlg_crm.oportunity', string="Oportunidad", required=True)
 
     # ORM
     def f_create(self):
