@@ -128,6 +128,6 @@
             </field>
         </record>
 
-        <menuitem id="menu_dlg_crm_opportunity" name="Oportunidades" parent="menu_dlg_crm_root" action="action_dlg_crm_opportunity_view" sequence="2"/>
+        <menuitem id="menu_dlg_crm_opportunity" name="Oportunidades" parent="menu_dlg_crm_root" action="action_dlg_crm_opportunity_view" sequence="1"/>
     </data>
  </odoo>

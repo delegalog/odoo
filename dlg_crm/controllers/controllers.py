@@ -10,7 +10,8 @@ class OpportunityController(http.Controller):
     def get_opportunities(self, **kw):
         try:
             opportunities = http.request.env['dlg_crm.opportunity'].sudo().search_read([], ['id', 'name', 'customer',
-                                                                                            'notes', 'status', 'done'])
+                                                                                            'notes', 'status', 'done',
+                                                                                            'phase_id'])
             res = json.dumps(opportunities, ensure_ascii=False).encode('utf-8')
             return Response(res, content_type='application/json;charset=utf-8', status=200)
         except Exception as e:
