@@ -31,11 +31,6 @@
                                         <field name="name"/>
                                     </strong>
                                 </div>
-                                <div class="oe_kanban_details2">
-                                    <t t-foreach="opportunity_id" t-as="opp">
-                                        <p><t t-esc="opp"/></p>
-                                    </t>
-                                </div>
                             </div>
                         </t>
                     </templates>
