@@ -16,7 +16,7 @@ class Opportunity(models.Model):
                              ('G', '-')], string='Tipo', required=True)
     done = fields.Boolean(string='Realizada', readonly=True)
     image = fields.Binary(string='Imagen')
-    phase = fields.Many2one('dlg_crm.phase', string="Fase", ondelete='set null', required=True)
+    phase = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
 
     def toggle_state(self):
         self.done = not self.done
@@ -31,7 +31,7 @@ class Opportunity(models.Model):
             'type': 'C',
             'status': '0',
             'done': False,
-            'phase_id': 'LEAD'
+            'phase': 'LEAD'
         }
         print(opportunity)
         self.env['dlg_crm.opportunity'].create(opportunity)
