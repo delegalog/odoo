@@ -29,7 +29,6 @@
                                 <div class="oe_kanban_details">
                                     <strong class="o_kanban_record_title">
                                         <field name="name"/>
-                                        <field name="opportunity"/>
                                     </strong>
                                 </div>
                             </div>
