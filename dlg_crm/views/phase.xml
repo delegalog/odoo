@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="oe_kanban_details">
                                     <div>
-                                        <t t-esc="record.opportunity.value"/>
+                                        <field name="opportunity"/>
                                     </div>
                                 </div>
                             </div>
