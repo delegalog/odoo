@@ -32,7 +32,7 @@
                                     </strong>
                                 </div>
                                 <p>
-                                    <t t-foreach="record.opportunity.raw_value" t-as="o">
+                                    <t t-foreach="opportunity" t-as="o">
                                     <t t-esc="o.name"/><field name="name"/><br/>
                                     </t>
                                 </p>
