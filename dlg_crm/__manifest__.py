@@ -24,11 +24,9 @@
     # always loaded
     'data': [
         #'security/ir.model.access.csv',
-        #'views/manager.xml',
         'views/phase.xml',
         'views/opportunity.xml',
         'views/templates.xml',
-        #'reports/manager.xml',
         'reports/phase.xml',
         'reports/opportunity.xml',
     ],

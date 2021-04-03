@@ -1,8 +1,8 @@
 <odoo>
     <data>
-        <record id="view_opportunity_form" model="ir.ui.view">
-            <field name="name">view.opportunity.form</field>
-            <field name="model">opportunity</field>
+        <record id="view_dlg_crm_opportunity_form" model="ir.ui.view">
+            <field name="name">view.dlg.crm.opportunity.form</field>
+            <field name="model">dlg.crm.opportunity</field>
             <field name="arch" type="xml">
                 <form string="Oportunidad">
                     <sheet>
@@ -30,9 +30,9 @@
             </field>
         </record>
 
-        <record id="view_opportunity_kanban" model="ir.ui.view">
-            <field name="name">view.opportunity.kanban</field>
-            <field name="model">opportunity</field>
+        <record id="view_dlg_crm_opportunity_kanban" model="ir.ui.view">
+            <field name="name">view.dlg.crm.opportunity.kanban</field>
+            <field name="model">dlg.crm.opportunity</field>
             <field name="arch" type="xml">
                 <kanban class="o_opportunity_kanban">
                     <field name="id"/>
@@ -60,7 +60,7 @@
                                     <div t-if="record.type.value">
                                         <t t-esc="record.type.value"/>
                                     </div>
-                                    <div t-if="record.phase.value">
+                                    <div t-if="record.phase_id.value">
                                         <t t-esc="record.phase_id.value"/>
                                     </div>
                                 </div>
@@ -71,9 +71,9 @@
             </field>
         </record>
 
-        <record id="view_opportunity_tree" model="ir.ui.view">
-            <field name="name">view.opportunity.tree</field>
-            <field name="model">opportunity</field>
+        <record id="view_dlg_crm_opportunity_tree" model="ir.ui.view">
+            <field name="name">view.dlg.crm.opportunity.tree</field>
+            <field name="model">dlg.crm.opportunity</field>
             <field name="arch" type="xml">
                 <tree string="Oportunidad">
                     <field name="customer"/>
@@ -88,9 +88,9 @@
             </field>
         </record>
 
-        <record id="view_opportunity_search" model="ir.ui.view">
-            <field name="name">view.opportunity.search</field>
-            <field name="model">opportunity</field>
+        <record id="view_dlg_crm_opportunity_search" model="ir.ui.view">
+            <field name="name">view.dlg.crm.opportunity.search</field>
+            <field name="model">dlg.crm.opportunity</field>
             <field name="arch" type="xml">
                 <search string="Filtrar oportunidades">
                     <field name="name"/>
@@ -113,10 +113,10 @@
             </field>
         </record>
 
-        <record id="action_opportunity_view" model="ir.actions.act_window">
+        <record id="action_dlg_crm_opportunity_view" model="ir.actions.act_window">
             <field name="name">Opportunity</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">opportunity</field>
+            <field name="res_model">dlg.crm.opportunity</field>
             <field name="view_mode">kanban,tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
@@ -128,6 +128,6 @@
             </field>
         </record>
 
-        <menuitem id="menu_opportunity" name="Oportunidades" parent="menu_root" action="action_opportunity_view" sequence="1"/>
+        <menuitem id="menu_opportunity" name="Oportunidades" parent="menu_root" action="action_dlg_crm_opportunity_view" sequence="1"/>
     </data>
  </odoo>
