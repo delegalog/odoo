@@ -30,30 +30,6 @@
                                     <strong class="o_kanban_record_title">
                                         <field name="name"/>
                                     </strong>
-                                    <div t-if="record.name.value">
-                                        <t t-esc="record.name.value"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </t>
-                    </templates>
-                </kanban>
-            </field>
-            <field name="name">view.dlg.crm.opportunity.kanban</field>
-            <field name="model">dlg_crm.opportunity</field>
-            <field name="arch" type="xml">
-                <kanban class="o_dlg_crm_opportunity_kanban">
-                    <field name="name"/>
-                    <templates>
-                        <t t-name="kanban-box">
-                            <div t-attf-class="oe_kanban_global_click">
-                                <div class="oe_kanban_details">
-                                    <strong class="o_kanban_record_title">
-                                        <field name="name"/>
-                                    </strong>
-                                    <div t-if="record.name.value">
-                                        <t t-esc="record.name.value"/>
-                                    </div>
                                 </div>
                             </div>
                         </t>
