@@ -15,7 +15,8 @@ class Phase(models.Model):
     def f_create(self):
         phase = {
             'id': 'ORM test',
-            'name': 'ORM test'
+            'name': 'ORM test',
+            'opportunity': 'ORM test'
         }
         print(phase)
         self.env['dlg_crm.phase'].create(phase)
