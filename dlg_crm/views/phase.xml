@@ -30,6 +30,9 @@
                                     <strong class="o_kanban_record_title">
                                         <field name="name"/>
                                     </strong>
+                                    <div t-if="record.opportunity.value">
+                                        <t t-esc="record.opportunity.value"/>
+                                    </div>
                                 </div>
                             </div>
                         </t>
