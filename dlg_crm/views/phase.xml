@@ -32,7 +32,7 @@
                                     </strong>
                                 </div>
                                 <p>
-                                    <t t-foreach="opportunity" t-as="o">
+                                    <t t-foreach="dlg_crm.phase.opportunity" t-as="o">
                                     <t t-esc="o.name"/><field name="name"/><br/>
                                     </t>
                                 </p>
