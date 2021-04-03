@@ -32,8 +32,8 @@
                                     </strong>
                                 </div>
                                 <div class="oe_kanban_details2">
-                                    <t t-foreach="opportunity" t-as="opp">
-                                        <t t-esc="opp" />
+                                    <t t-foreach="opportunity_id" t-as="opp">
+                                        <p><t t-esc="opp"/></p>
                                     </t>
                                 </div>
                             </div>
