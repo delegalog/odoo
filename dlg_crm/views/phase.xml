@@ -31,11 +31,11 @@
                                         <field name="name"/>
                                     </strong>
                                 </div>
-                                <p>
-                                    <t t-foreach="dlg_crm.phase.opportunity" t-as="o">
-                                    <t t-esc="o.name"/><field name="name"/><br/>
+                                <div class="oe_kanban_opps">
+                                    <t t-foreach="opportunity" t-as="o">
+                                        <t t-esc="o.name"/>
                                     </t>
-                                </p>
+                                </div>
                             </div>
                         </t>
                     </templates>
