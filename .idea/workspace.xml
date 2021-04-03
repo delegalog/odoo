@@ -6,8 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cee65ad8-7cfb-4a9d-95d0-64930dd53c67" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dlg_crm/controllers/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_crm/controllers/controllers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dlg_crm/models/opportunity.py" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_crm/models/opportunity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_crm/models/phase.py" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_crm/models/phase.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +16,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1l864M7CACcvXZOQ0U4xOENjpBr" />
   <component name="ProjectLevelVcsManager">

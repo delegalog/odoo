@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-import opportunity
 
 
 class Phase(models.Model):
@@ -11,7 +10,6 @@ class Phase(models.Model):
     id = fields.Integer(string='ID')
     name = fields.Char(string='Nombre')
     #opportunity = fields.One2many(opportunity.Opportunity, 'phase', string="Oportunidad")
-    opportunity = fields.Many2one('opportunity', string="Oportuidad")
 
     #ORM
     def f_create(self):

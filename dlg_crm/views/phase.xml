@@ -31,11 +31,6 @@
                                         <field name="name"/>
                                     </strong>
                                 </div>
-                                <div class="oe_kanban_opps">
-                                    <t t-foreach="phase.opportunity" t-as="o">
-                                        <t t-esc="o.name"/>
-                                    </t>
-                                </div>
                             </div>
                         </t>
                     </templates>
