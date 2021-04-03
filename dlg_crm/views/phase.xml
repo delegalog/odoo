@@ -30,12 +30,12 @@
                                     <strong class="o_kanban_record_title">
                                         <field name="name"/>
                                     </strong>
-
-                                    <t t-foreach="record.opportunity.raw_value" t-as="opp">
-                                        <t t-esc="opp.name"/>
-                                    </t>
-
                                 </div>
+                                <p>
+                                    <t t-foreach="record.opportunity.raw_value" t-as="o">
+                                    <t t-esc="o.name"/><field name="name"/><br/>
+                                    </t>
+                                </p>
                             </div>
                         </t>
                     </templates>
