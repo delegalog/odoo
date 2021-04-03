@@ -32,9 +32,9 @@
                                     </strong>
                                 </div>
                                 <div class="oe_kanban_details2">
-                                    <li t-foreach="opportunity" t-as="opp">
-                                        <span t-esc="opp" />
-                                    </li>
+                                    <t t-foreach="record.opportunity.raw_value" t-as="opp">
+                                        <t t-esc="opp" />
+                                    </t>
                                 </div>
                             </div>
                         </t>
