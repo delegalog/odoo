@@ -1,8 +1,8 @@
 <odoo>
     <data>
-        <record id="view_dlg_crm_phase_form" model="ir.ui.view">
-            <field name="name">view.dlg.crm.phase.form</field>
-            <field name="model">dlg_crm.phase</field>
+        <record id="view_phase_form" model="ir.ui.view">
+            <field name="name">view.phase.form</field>
+            <field name="model">phase</field>
             <field name="arch" type="xml">
                 <form string="Fase">
                     <sheet>
@@ -17,11 +17,11 @@
             </field>
         </record>
 
-        <record id="view_dlg_crm_phase_kanban" model="ir.ui.view">
-            <field name="name">view.dlg.crm.phase.kanban</field>
-            <field name="model">dlg_crm.phase</field>
+        <record id="view_phase_kanban" model="ir.ui.view">
+            <field name="name">view.phase.kanban</field>
+            <field name="model">phase</field>
             <field name="arch" type="xml">
-                <kanban class="o_dlg_crm_phase_kanban">
+                <kanban class="o_phase_kanban">
                     <field name="name"/>
                     <templates>
                         <t t-name="kanban-box">
@@ -38,9 +38,9 @@
             </field>
         </record>
 
-        <record id="view_dlg_crm_phase_tree" model="ir.ui.view">
-            <field name="name">view.dlg.crm.phase.tree</field>
-            <field name="model">dlg_crm.phase</field>
+        <record id="view_phase_tree" model="ir.ui.view">
+            <field name="name">view.phase.tree</field>
+            <field name="model">phase</field>
             <field name="arch" type="xml">
                 <tree string="Fase">
                     <field name="name"/>
@@ -52,9 +52,9 @@
             </field>
         </record>
 
-        <record id="view_dlg_crm_phase_search" model="ir.ui.view">
-            <field name="name">view.dlg.crm.phase.search</field>
-            <field name="model">dlg_crm.phase</field>
+        <record id="view_phase_search" model="ir.ui.view">
+            <field name="name">view.phase.search</field>
+            <field name="model">phase</field>
             <field name="arch" type="xml">
                 <search string="Filtrar Fases">
                     <field name="name"/>
@@ -69,10 +69,10 @@
             </field>
         </record>
 
-        <record id="action_dlg_crm_phase_view" model="ir.actions.act_window">
+        <record id="action_phase_view" model="ir.actions.act_window">
             <field name="name">Phase</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">dlg_crm.phase</field>
+            <field name="res_model">phase</field>
             <field name="view_mode">kanban,tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
@@ -83,7 +83,7 @@
                 </p>
             </field>
         </record>
-        <menuitem id="menu_dlg_crm_root" name="dlg219 CRM" sequence="10"/>
-        <menuitem id="menu_dlg_crm_phase" name="Fases" parent="menu_dlg_crm_root" action="action_dlg_crm_phase_view" sequence="0"/>
+        <menuitem id="menu_root" name="dlg219 CRM" sequence="10"/>
+        <menuitem id="menu_phase" name="Fases" parent="menu_root" action="action_phase_view" sequence="0"/>
     </data>
 </odoo>
