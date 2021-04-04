@@ -47,7 +47,7 @@
                             </div>
                         </t>
 
-                        <t t-name="kanban-box">
+                        <t t-name="kanban-box_opp">
                             <div t-attf-class="oe_kanban_global_click">
                                 <div t-foreach="opportunity_id" t-as="o">
                                     <t t-esc="o.name"/>
