@@ -45,10 +45,8 @@
                                         <field name="customer"/>
                                     </strong>
                                     <div>
-                                        <t t-if="record.date.value"/>
-                                            <t t-esc="record.date.value"/>
-                                        <t t-else=""/>
-                                            <t t-esc="sin fecha"/>
+                                        <p t-if="record.date.value"><t t-esc="record.date.value"/></p>
+                                        <p t-else="">Sin fecha</p>
                                     </div>
                                 </div>
                             </div>
