@@ -32,7 +32,6 @@ class Opportunity(models.Model):
             'type': 'C',
             'status': '0',
             'done': False,
-            'phase_id': 'LEAD',
             'color': 0
         }
         print(opportunity)
