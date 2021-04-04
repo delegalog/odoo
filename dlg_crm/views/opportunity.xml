@@ -34,7 +34,7 @@
             <field name="name">view.dlg.crm.opportunity.kanban</field>
             <field name="model">dlg_crm.opportunity</field>
             <field name="arch" type="xml">
-                <kanban default_group_by="phase">
+                <kanban default_group_by="type">
                     <field name="color"/>
                     <templates>
                         <t t-name="kanban-box">
