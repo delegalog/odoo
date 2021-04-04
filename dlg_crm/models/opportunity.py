@@ -4,7 +4,7 @@ from odoo import models, fields, api
 import datetime
 
 
-class DlgCrmOpportunity(models.Model):
+class Opportunity(models.Model):
     _name = 'dlg_crm.opportunity'
     _description = 'Opportunity'
 
@@ -52,7 +52,7 @@ class DlgCrmOpportunity(models.Model):
         opportunity.unlink()
 
 
-class DlgCrmOpportunityReport(models.AbstractModel):
+class OpportunityReport(models.AbstractModel):
 
     _name = 'report.dlg_crm.report_opportunity_card'
 
