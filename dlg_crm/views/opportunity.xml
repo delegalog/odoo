@@ -16,7 +16,7 @@
                                 <field name="customer"/>
                                 <field name="date"/>
                                 <field name="type"/>
-                                <field name="phase_id"/>
+                                <field name="phase"/>
                             </group>
                             <group name="group_right">
                                 <field name="name"/>
@@ -35,6 +35,13 @@
             <field name="model">dlg_crm.opportunity</field>
             <field name="arch" type="xml">
                 <kanban class="o_dlg_crm_opportunity_kanban">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="notes"/>
+                    <field name="customer"/>
+                    <field name="date"/>
+                    <field name="type"/>
+                    <field name="phase"/>
                     <templates>
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_global_click">
@@ -53,6 +60,9 @@
                                     <div t-if="record.type.value">
                                         <t t-esc="record.type.value"/>
                                     </div>
+                                    <div t-if="record.phase.value">
+                                        <t t-esc="record.phase.value"/>
+                                    </div>
                                 </div>
                             </div>
                         </t>
@@ -69,7 +79,7 @@
                     <field name="customer"/>
                     <field name="name"/>
                     <field name="type"/>
-                    <field name="phase_id"/>
+                    <field name="phase"/>
                     <field name="date"/>
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
                     <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
@@ -87,10 +97,10 @@
                     <field name="notes"/>
                     <field name="customer"/>
                     <field name="type"/>
-                    <field name="phase_id"/>
+                    <field name="phase"/>
                     <field name="date"/>
                     <group expand="0" string="Group By">
-                        <filter name="groupby_type" string="Fase" domain="[]" context="{'group_by':'phase_id'}"
+                        <filter name="groupby_type" string="Fase" domain="[]" context="{'group_by':'phase'}"
                                 help="Agrupar por situación"/>
                         <filter name="groupby_type" string="Tipo" domain="[]" context="{'group_by':'type'}"
                                 help="Agrupar por tipo"/>
