@@ -15,6 +15,7 @@
                                 <tr t-foreach='opportunity_id' t-as='opp'>
                                     <td><span t-esc="opp.name"/></td>
                                 </tr>
+                            </group>
                         </group>
                     </sheet>
                 </form>
