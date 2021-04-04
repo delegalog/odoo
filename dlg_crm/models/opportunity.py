@@ -16,7 +16,7 @@ class Opportunity(models.Model):
                              ('G', '-')], string='Tipo', required=True)
     done = fields.Boolean(string='Realizada', readonly=True)
     image = fields.Binary(string='Imagen')
-    phase_id = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
+    phase = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
     color = fields.Integer()
 
     def toggle_state(self):
