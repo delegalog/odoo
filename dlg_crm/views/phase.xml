@@ -46,14 +46,11 @@
                                 </div>
                             </div>
                         </t>
-                    </templates>
-                    <templates>
+
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_global_click">
-                                <div class="oe_kanban_details">
-                                    <div t-foreach="opportunity_id" t-as="o">
-                                        <span t-field="o.name"/>
-                                    </div>
+                                <div t-foreach="opportunity_id" t-as="o">
+                                    <t t-esc="o.name"/>
                                 </div>
                             </div>
                         </t>
