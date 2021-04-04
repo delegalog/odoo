@@ -12,6 +12,7 @@
                                 <field name="name"/>
                             </group>
                             <group name="group_right">
+                                <field name="id"/>
                                 <tr t-foreach='opportunity_id' t-as='opp'>
                                     <td><span t-esc="opp.name"/></td>
                                 </tr>
