@@ -17,26 +17,6 @@
             </field>
         </record>
 
-        <record id="view_dlg_crm_phase_kanban_opp" model="ir.ui.view">
-            <field name="name">view.dlg.crm.phase.kanban.opp</field>
-            <field name="model">dlg_crm.phase</field>
-            <field name="arch" type="xml">
-                <kanban class="o_dlg_crm_phase_kanban_opp">
-                    <templates>
-                        <t t-name="kanban-box">
-                            <div t-attf-class="oe_kanban_global_click">
-                                <div class="oe_kanban_details">
-                                    <t t-foreach="opportunity_id" t-as="opp">
-                                        <span t-esc="opportunity_id.name" />
-                                    </t>
-                                </div>
-                            </div>
-                        </t>
-                    </templates>
-                </kanban>
-            </field>
-        </record>
-
         <record id="view_dlg_crm_phase_kanban" model="ir.ui.view">
             <field name="name">view.dlg.crm.phase.kanban</field>
             <field name="model">dlg_crm.phase</field>
@@ -70,6 +50,15 @@
                 <tree string="Fase">
                     <field name="name"/>
                     <field name="id"/>
+
+                    <t
+		                t-name="dashboard_opportunity_template"
+		                t-foreach="opportunity_id"
+		                t-as="opp"
+		                class="col-md-4 col-sm-12 p-2"
+                    />
+                    <span t-esc="opportunity_id.name" />
+
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
                     <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
