@@ -34,13 +34,7 @@
             <field name="name">view.dlg.crm.opportunity.kanban</field>
             <field name="model">dlg_crm.opportunity</field>
             <field name="arch" type="xml">
-                <kanban class="o_dlg_crm_opportunity_kanban">
-                    <field name="id"/>
-                    <field name="name"/>
-                    <field name="notes"/>
-                    <field name="customer"/>
-                    <field name="date"/>
-                    <field name="type"/>
+                <kanban default_group_by="phase_id">
                     <field name="phase_id"/>
                     <templates>
                         <t t-name="kanban-box">

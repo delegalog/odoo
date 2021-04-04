@@ -9,14 +9,14 @@ class Phase(models.Model):
 
     id = fields.Integer(string='ID')
     name = fields.Char(string='Nombre')
-    opportunity_id = fields.One2many('dlg_crm.opportunity', 'phase_id', string="Opportunity", required=False)
+    #opportunity_id = fields.One2many('dlg_crm.opportunity', 'phase_id', string="Opportunity", required=False)
 
-    #ORM
+    # ORM
     def f_create(self):
         phase = {
             'id': 'ORM test',
             'name': 'ORM test',
-            'opportunity_id': 'ORM test'
+            #'opportunity_id': 'ORM test'
         }
         print(phase)
         self.env['dlg_crm.phase'].create(phase)
@@ -38,7 +38,6 @@ class Phase(models.Model):
 
 
 class PhaseReport(models.AbstractModel):
-
     _name = 'report.dlg_crm.report_phase_card'
 
     @api.model
