@@ -35,7 +35,7 @@
             <field name="model">dlg_crm.opportunity</field>
             <field name="arch" type="xml">
                 <kanban default_group_by="phase_id">
-                    <field name="phase_id"/>
+                    <field name="color"/>
                     <templates>
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_global_click">

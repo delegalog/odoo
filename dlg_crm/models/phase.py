@@ -9,6 +9,7 @@ class Phase(models.Model):
 
     id = fields.Integer(string='ID')
     name = fields.Char(string='Nombre')
+    color = fields.Integer()
     #opportunity_id = fields.One2many('dlg_crm.opportunity', 'phase_id', string="Opportunity", required=False)
 
     # ORM
@@ -16,6 +17,7 @@ class Phase(models.Model):
         phase = {
             'id': 'ORM test',
             'name': 'ORM test',
+            'color': '0'
             #'opportunity_id': 'ORM test'
         }
         print(phase)
