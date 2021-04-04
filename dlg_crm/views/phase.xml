@@ -36,12 +36,6 @@
                                         <field name="name"/>
                                         <field name="id"/>
                                     </strong>
-                                    <div t-if="record.name.value">
-                                        <t t-esc="record.name.value"/>
-                                    </div>
-                                    <div t-if="record.id.value">
-                                        <t t-esc="record.id.value"/>
-                                    </div>
                                 </div>
                             </div>
                         </t>
