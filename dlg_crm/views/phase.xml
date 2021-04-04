@@ -19,6 +19,20 @@
                             </group>
                         </group>
                     </sheet>
+                    <sheet>
+                        <group name="group_bottom">
+                            <group name="group_left">
+                                <field name="id"/>
+                                <field name="name"/>
+                            </group>
+                            <group name="group_right">
+                                <field name="id"/>
+                                <tr t-foreach='opportunity_id' t-as='opp'>
+                                    <td><span t-esc="opp.name"/></td>
+                                </tr>
+                            </group>
+                        </group>
+                    </sheet>
                 </form>
             </field>
         </record>
