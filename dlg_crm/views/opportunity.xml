@@ -44,9 +44,6 @@
                                         <field name="name"/>
                                         <field name="customer"/>
                                     </strong>
-                                    <div t-if="record.date.value">
-                                        <t t-esc="record.date.value"/>
-                                    </div>
                                     <div t-if="record.type.value">
                                         <t t-esc="record.type.value"/>
                                     </div>
