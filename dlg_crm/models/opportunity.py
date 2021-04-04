@@ -17,6 +17,7 @@ class Opportunity(models.Model):
     done = fields.Boolean(string='Realizada', readonly=True)
     image = fields.Binary(string='Imagen')
     phase_id = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
+    color = fields.Integer()
 
     def toggle_state(self):
         self.done = not self.done
@@ -31,7 +32,8 @@ class Opportunity(models.Model):
             'type': 'C',
             'status': '0',
             'done': False,
-            'phase_id': 'LEAD'
+            'phase_id': 'LEAD',
+            'color': 0
         }
         print(opportunity)
         self.env['dlg_crm.opportunity'].create(opportunity)
