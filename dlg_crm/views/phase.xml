@@ -24,6 +24,7 @@
                 <kanban class="o_dlg_crm_phase_kanban">
                     <field name="id"/>
                     <field name="name"/>
+                    <field name="opportunity_id"/>
                     <templates>
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_global_click">
@@ -41,6 +42,17 @@
                                     </div>
                                     <div t-if="record.id.value">
                                         <t t-esc="record.id.value"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <div t-foreach="opportunity_id" t-as="o">
+                                        <span t-field="o.name"/>
                                     </div>
                                 </div>
                             </div>
