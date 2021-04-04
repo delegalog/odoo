@@ -1,8 +1,8 @@
 <odoo>
     <data>
-        <record id="view_dlg.crm_phase_form" model="ir.ui.view">
+        <record id="view_dlg_crm_phase_form" model="ir.ui.view">
             <field name="name">view.dlg.crm.phase.form</field>
-            <field name="model">dlg.crm.phase</field>
+            <field name="model">dlg_crm.phase</field>
             <field name="arch" type="xml">
                 <form string="Fase">
                     <sheet>
@@ -19,7 +19,7 @@
 
         <record id="view_dlg_crm_phase_kanban" model="ir.ui.view">
             <field name="name">view.dlg.crm.phase.kanban</field>
-            <field name="model">dlg.crm.phase</field>
+            <field name="model">dlg_crm.phase</field>
             <field name="arch" type="xml">
                 <kanban class="o_phase_kanban">
                     <field name="name"/>
@@ -40,7 +40,7 @@
 
         <record id="view_dlg_crm_phase_tree" model="ir.ui.view">
             <field name="name">view.dlg.crm.phase.tree</field>
-            <field name="model">dlg.crm.phase</field>
+            <field name="model">dlg_crm.phase</field>
             <field name="arch" type="xml">
                 <tree string="Fase">
                     <field name="name"/>
@@ -54,7 +54,7 @@
 
         <record id="view_dlg_crm_phase_search" model="ir.ui.view">
             <field name="name">view.dlg.crm.phase.search</field>
-            <field name="model">dlg.crm.phase</field>
+            <field name="model">dlg_crm.phase</field>
             <field name="arch" type="xml">
                 <search string="Filtrar Fases">
                     <field name="name"/>
@@ -72,7 +72,7 @@
         <record id="action_dlg_crm_phase_view" model="ir.actions.act_window">
             <field name="name">Phase</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">dlg.crm.phase</field>
+            <field name="res_model">dlg_crm.phase</field>
             <field name="view_mode">kanban,tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">

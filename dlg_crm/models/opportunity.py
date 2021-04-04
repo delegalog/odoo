@@ -5,7 +5,7 @@ import datetime
 
 
 class DlgCrmOpportunity(models.Model):
-    _name = 'dlg.crm.opportunity'
+    _name = 'dlg_crm.opportunity'
     _description = 'Opportunity'
 
     name = fields.Char(string='Descripción')
@@ -16,7 +16,7 @@ class DlgCrmOpportunity(models.Model):
                              ('G', '-')], string='Tipo', required=True)
     done = fields.Boolean(string='Realizada', readonly=True)
     image = fields.Binary(string='Imagen')
-    phase_id = fields.Many2one('dlg.crm.phase', string="Fase", required=True)
+    phase_id = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
 
     def toggle_state(self):
         self.done = not self.done
@@ -34,13 +34,13 @@ class DlgCrmOpportunity(models.Model):
             'phase_id': 'LEAD'
         }
         print(opportunity)
-        self.env['opportunity'].create(opportunity)
+        self.env['dlg_crm.opportunity'].create(opportunity)
 
     def f_search_update(self):
-        opportunity = self.env['dlg.crm.opportunity'].search([('name', '=', 'ORM test')])
+        opportunity = self.env['dlg_crm.opportunity'].search([('name', '=', 'ORM test')])
         print('search()', opportunity, opportunity.name)
 
-        opportunity_b = self.env['dlg.crm.opportunity'].browse([8])
+        opportunity_b = self.env['dlg_crm.opportunity'].browse([8])
         print('browse()', opportunity_b, opportunity_b.name)
 
         opportunity.write({
@@ -48,7 +48,7 @@ class DlgCrmOpportunity(models.Model):
         })
 
     def f_delete(self):
-        opportunity = self.env['dlg.crm.opportunity'].browse([8])
+        opportunity = self.env['dlg_crm.opportunity'].browse([8])
         opportunity.unlink()
 
 
@@ -62,6 +62,6 @@ class DlgCrmOpportunityReport(models.AbstractModel):
         report = report_obj._get_report_from_name('dlg_crm.report_opportunity_card')
         return {
             'doc_ids': docids,
-            'doc_model': self.env['dlg.crm.opportunity'],
-            'docs': self.env['dlg.crm.opportunity'].browse(docids)
+            'doc_model': self.env['dlg_crm.opportunity'],
+            'docs': self.env['dlg_crm.opportunity'].browse(docids)
         }

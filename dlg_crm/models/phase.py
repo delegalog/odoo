@@ -4,12 +4,12 @@ from odoo import models, fields, api
 
 
 class DlgCrmPhase(models.Model):
-    _name = 'dlg.crm.phase'
+    _name = 'dlg_crm.phase'
     _description = 'Phase'
 
     id = fields.Integer(string='ID')
     name = fields.Char(string='Nombre')
-    opportunity_id = fields.One2many('dlg.crm.opportunity', 'phase', string="Oportunidad")
+    opportunity_id = fields.One2many('dlg_crm.opportunity', 'phase', string="Oportunidad")
 
     #ORM
     def f_create(self):
@@ -19,13 +19,13 @@ class DlgCrmPhase(models.Model):
             'opportunity_id': 'LEAD'
         }
         print(phase)
-        self.env['dlg.crm.phase'].create(phase)
+        self.env['dlg_crm.phase'].create(phase)
 
     def f_search_update(self):
-        phase = self.env['dlg.crm.phase'].search([('name', '=', 'ORM test')])
+        phase = self.env['dlg_crm.phase'].search([('name', '=', 'ORM test')])
         print('search()', phase, phase.name)
 
-        phase_b = self.env['dlg.crm.phase'].browse([8])
+        phase_b = self.env['dlg_crm.phase'].browse([8])
         print('browse()', phase_b, phase_b.name)
 
         phase.write({
@@ -33,7 +33,7 @@ class DlgCrmPhase(models.Model):
         })
 
     def f_delete(self):
-        phase = self.env['dlg.crm.phase'].browse([8])
+        phase = self.env['dlg_crm.phase'].browse([8])
         phase.unlink()
 
 
@@ -47,6 +47,6 @@ class PhaseReport(models.AbstractModel):
         report = report_obj._get_report_from_name('dlg_crm.report_phase_card')
         return {
             'doc_ids': docids,
-            'doc_model': self.env['dlg.crm.phase'],
-            'docs': self.env['dlg.crm.phase'].browse(docids)
+            'doc_model': self.env['dlg_crm.phase'],
+            'docs': self.env['dlg_crm.phase'].browse(docids)
         }
