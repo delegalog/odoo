@@ -9,7 +9,6 @@ class Phase(models.Model):
 
     id = fields.Integer(string='ID')
     name = fields.Char(string='Nombre')
-    opportunity_id = fields.one2Many('dlg_crm.opportunity', 'name', string="Opportunity", required=False)
 
     #ORM
     def f_create(self):
