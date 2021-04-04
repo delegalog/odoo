@@ -44,8 +44,11 @@
                                         <field name="name"/>
                                         <field name="customer"/>
                                     </strong>
-                                    <div t-if="record.phase.value">
-                                        <t t-esc="record.phase.value"/>
+                                    <div>
+                                        <t t-if="record.date.value"/>
+                                            <t t-esc="record.date.value"/>
+                                        <t t-else=""/>
+                                            <t t-esc="sin fecha"/>
                                     </div>
                                 </div>
                             </div>
