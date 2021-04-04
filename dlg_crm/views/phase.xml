@@ -54,7 +54,7 @@
 		                t-foreach="opportunity_id"
 		                t-as="opp"
                     />
-                    <t t-esc="opp.name" />
+                    <t t-esc="opp.opportunity.name" />
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
                     <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
