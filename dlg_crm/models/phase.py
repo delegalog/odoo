@@ -3,20 +3,18 @@
 from odoo import models, fields, api
 
 
-class DlgCrmPhase(models.Model):
+class Phase(models.Model):
     _name = 'dlg_crm.phase'
     _description = 'Phase'
 
     id = fields.Integer(string='ID')
     name = fields.Char(string='Nombre')
-    opportunity_id = fields.One2many('dlg_crm.opportunity', 'phase', string="Oportunidad")
 
     #ORM
     def f_create(self):
         phase = {
             'id': 'ORM test',
-            'name': 'ORM test',
-            'opportunity_id': 'LEAD'
+            'name': 'ORM test'
         }
         print(phase)
         self.env['dlg_crm.phase'].create(phase)
