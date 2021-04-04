@@ -46,10 +46,6 @@
                                 </div>
                             </div>
                         </t>
-
-                        <t t-name="kanban-box_opp">
-
-                        </t>
                     </templates>
                 </kanban>
             </field>
