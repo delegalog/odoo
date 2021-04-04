@@ -17,6 +17,26 @@
             </field>
         </record>
 
+        <record id="view_dlg_crm_phase_kanban_opp" model="ir.ui.view">
+            <field name="name">view.dlg.crm.phase.kanban.opp</field>
+            <field name="model">dlg_crm.phase</field>
+            <field name="arch" type="xml">
+                <kanban class="o_dlg_crm_phase_kanban_opp">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <t t-foreach="opportunity_id" t-as="opp">
+                                        <span t-esc="opportunity_id.name" />
+                                    </t>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
         <record id="view_dlg_crm_phase_kanban" model="ir.ui.view">
             <field name="name">view.dlg.crm.phase.kanban</field>
             <field name="model">dlg_crm.phase</field>
@@ -35,26 +55,6 @@
                                     <strong class="o_kanban_record_title">
                                         <field name="name"/>
                                     </strong>
-                                </div>
-                            </div>
-                        </t>
-                    </templates>
-                </kanban>
-            </field>
-        </record>
-
-        <record id="view_dlg_crm_phase_kanban_opp" model="ir.ui.view">
-            <field name="name">view.dlg.crm.phase.kanban.opp</field>
-            <field name="model">dlg_crm.phase</field>
-            <field name="arch" type="xml">
-                <kanban class="o_dlg_crm_phase_kanban_opp">
-                    <templates>
-                        <t t-name="kanban-box">
-                            <div t-attf-class="oe_kanban_global_click">
-                                <div class="oe_kanban_details">
-                                    <t t-foreach="opportunity_id" t-as="opp">
-                                        <span t-esc="opportunity_id.name" />
-                                    </t>
                                 </div>
                             </div>
                         </t>
