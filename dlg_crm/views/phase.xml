@@ -54,11 +54,19 @@
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
                     <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
-                    <tree string="Opportunity">
-                        <field name="opportunity_id"/>
-                    </tree>
                 </tree>
             </field>
+            <record id="view_dlg_crm_phase_opp_tree" model="ir.ui.view">
+                <field name="name">view.dlg.crm.phase.opp.tree</field>
+                <field name="model">dlg_crm.phase</field>
+                <field name="arch" type="xml">
+                    <tree string="Opportunidad">
+                        <field name="name"/>
+                        <field name="id"/>
+                        <field name="opportunity_id"/>
+                    </tree>
+                </field>
+            </record>
         </record>
 
         <record id="view_dlg_crm_phase_search" model="ir.ui.view">
