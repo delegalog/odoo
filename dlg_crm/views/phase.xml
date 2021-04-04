@@ -43,14 +43,13 @@
             </field>
         </record>
 
-        <record id="view_dlg_crm_phase_tree" model="ir.ui.view">
+       <record id="view_dlg_crm_phase_tree" model="ir.ui.view">
             <field name="name">view.dlg.crm.phase.tree</field>
             <field name="model">dlg_crm.phase</field>
             <field name="arch" type="xml">
                 <tree string="Fase">
                     <field name="name"/>
                     <field name="id"/>
-                    <field name="opportunity_id"/>
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
                     <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
