@@ -78,7 +78,7 @@
             <field name="name">Phase</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">dlg_crm.phase</field>
-            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_mode">tree,kanban,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     Fase
@@ -89,6 +89,6 @@
             </field>
         </record>
         <menuitem id="menu_dlg_crm_root" name="dlg219 CRM" sequence="10"/>
-        <menuitem id="menu_dlg_crm_phase" name="Fases" parent="menu_dlg_crm_root" action="action_dlg_crm_phase_view" sequence="0"/>
+        <menuitem id="menu_dlg_crm_phase" name="Fases" parent="menu_dlg_crm_root" action="action_dlg_crm_phase_view" sequence="1"/>
     </data>
 </odoo>

@@ -19,6 +19,10 @@ class Opportunity(models.Model):
     phase = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
     color = fields.Integer()
 
+    header = fields.boolean(requiered=True)
+    volume_year = fields.Long()
+    orders_year = fields.Long()
+
     def toggle_state(self):
         self.done = not self.done
 
