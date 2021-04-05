@@ -40,7 +40,7 @@
                 <kanban default_group_by="phase">
                     <field name="color"/>
                     <templates>
-                        <t t-if="header">
+                        <t t-if="not header">
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_global_click">
                                 <div class="oe_kanban_details">
