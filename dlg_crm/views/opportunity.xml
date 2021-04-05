@@ -17,11 +17,14 @@
                                 <field name="date"/>
                                 <field name="type"/>
                                 <field name="phase"/>
+                                <field name="header"/>
                             </group>
                             <group name="group_right">
                                 <field name="name"/>
                                 <field name="notes"/>
                                 <field name="done"/>
+                                <field name="volume_year"/>
+                                <field name="order_year"/>
                                 <field name="image" widget="image"/>
                             </group>
                         </group>
