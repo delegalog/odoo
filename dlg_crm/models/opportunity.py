@@ -36,9 +36,7 @@ class Opportunity(models.Model):
             'status': '0',
             'done': False,
             'color': 0,
-            'header': False,
-            'volume_year': 0,
-            'orders_year': 0
+            'header': False
         }
         print(opportunity)
         self.env['dlg_crm.opportunity'].create(opportunity)
