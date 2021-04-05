@@ -41,7 +41,7 @@
                     <field name="color"/>
                     <templates>
                         <t t-name="kanban-box">
-                            <t t-if="header=='1'"></t>
+                            <t t-if="header == '1'"><div><field name="orders_year"/>Pedidos/año</div></t>
                             <t t-else="">
                                 <div t-attf-class="oe_kanban_global_click">
                                     <div class="oe_kanban_details">
@@ -49,8 +49,8 @@
                                             <field name="customer"/>
                                         </strong>
                                         <div><field name="name"/></div>
-                                        <div><field name="orders_year"/></div>
-                                        <div><field name="volume_year"/></div>
+                                        <div><field name="orders_year"/>Pedidos/año</div>
+                                        <div><field name="volume_year"/>€/año</div>
                                     </div>
                                 </div>
                             </t>
