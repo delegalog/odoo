@@ -19,8 +19,8 @@ class Opportunity(models.Model):
     phase = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
     color = fields.Integer()
     header = fields.Boolean('Cabecera')
-    priority = fields.Selection([('A', 'Muy Alta'), ('B', 'Alta'), ('C', 'Normal'),
-                             ('D', 'Baja')], string='Prioridad', required=True)
+    priority = fields.Selection([('1', 'Muy Alta'), ('2', 'Alta'), ('3', 'Normal'),
+                             ('4', 'Baja')], string='Prioridad', required=True)
     volume_year = fields.Integer(String='€/año (estimación)')
     orders_year = fields.Integer(String='Pedidos/año (estimación)')
 
