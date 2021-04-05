@@ -24,6 +24,7 @@
                                 <field name="name"/>
                                 <field name="notes"/>
                                 <field name="done"/>
+                                <field name="priority"/>
                                 <field name="image" widget="image"/>
                                 <field name="header"/>
                             </group>
@@ -65,6 +66,7 @@
                     <field name="customer"/>
                     <field name="name"/>
                     <field name="phase"/>
+                    <field name="priority"/>
                     <field name="date"/>
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
                     <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
@@ -82,6 +84,7 @@
                     <field name="notes"/>
                     <field name="customer"/>
                     <field name="phase"/>
+                    <field name="priority"/>
                     <field name="date"/>
                     <group expand="0" string="Group By">
                         <filter name="groupby_type" string="Fase" domain="[]" context="{'group_by':'phase'}"
