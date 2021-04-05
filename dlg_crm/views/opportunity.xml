@@ -53,6 +53,7 @@
                                 </div>
                             </div>
                             </t>
+                            <t t-else=""></t>
                         </t>
                     </templates>
                 </kanban>
