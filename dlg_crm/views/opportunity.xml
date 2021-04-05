@@ -49,12 +49,14 @@
                                     </strong>
                                     <div><field name="name"/></div>
                                     <div t-if="orders_year!=0">
-                                        <t t-esc="orders_year"/>
-                                         pedidos/año
+                                        <t t-esc="orders_year">
+                                             pedidos/año
+                                        </t>
                                     </div>
                                     <div t-if="volume_year!=0">
-                                        <t t-esc="volume_year"/>
-                                         €/año
+                                        <t t-esc="volume_year">
+                                             €/año
+                                        </t>
                                     </div>
                                 </div>
                             </div>
