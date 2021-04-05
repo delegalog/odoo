@@ -9,14 +9,12 @@ class Phase(models.Model):
 
     id = fields.Integer(string='ID')
     name = fields.Char(string='Nombre')
-    #opportunity_id = fields.One2many('dlg_crm.opportunity', 'phase_id', string="Opportunity", required=False)
 
     # ORM
     def f_create(self):
         phase = {
             'id': 'ORM test',
             'name': 'ORM test'
-            #'opportunity_id': 'ORM test'
         }
         print(phase)
         self.env['dlg_crm.phase'].create(phase)

@@ -44,7 +44,6 @@
                                     <strong class="o_kanban_record_title">
                                         <field name="customer"/>
                                         <field name="name"/>
-                                        <field name="image" widget="image"/>
                                     </strong>
                                 </div>
                             </div>
