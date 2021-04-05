@@ -17,8 +17,6 @@
                                 <field name="date"/>
                                 <field name="type"/>
                                 <field name="phase"/>
-                                <field name="volume_year"/>
-                                <field name="orders_year"/>
                             </group>
                             <group name="group_right">
                                 <field name="name"/>
@@ -47,8 +45,6 @@
                                         <field name="customer"/>
                                         <field name="name"/>
                                         <field name="image" widget="image"/>
-                                        <field name="volume_year"/>
-                                        <field name="orders_year"/>
                                     </strong>
                                 </div>
                             </div>
@@ -67,8 +63,6 @@
                     <field name="name"/>
                     <field name="phase"/>
                     <field name="date"/>
-                    <field name="volume_year"/>
-                    <field name="orders_year"/>
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
                     <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
@@ -84,7 +78,6 @@
                     <field name="name"/>
                     <field name="notes"/>
                     <field name="customer"/>
-                    <field name="type"/>
                     <field name="phase"/>
                     <field name="date"/>
                     <group expand="0" string="Group By">
