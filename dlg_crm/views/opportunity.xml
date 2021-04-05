@@ -49,7 +49,7 @@
                                     <field name="name"/>
                                     <field name="image" widget="image"/>
                                     <field name="volume_year"/>
-                                    <field name="order_year"/>
+                                    <field name="orders_year"/>
                                 </div>
                             </div>
                         </t>
