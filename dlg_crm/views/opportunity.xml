@@ -17,7 +17,6 @@
                                 <field name="date"/>
                                 <field name="type"/>
                                 <field name="phase"/>
-                                <field name="header"/>
                             </group>
                             <group name="group_right">
                                 <field name="name"/>
