@@ -24,7 +24,8 @@ class PhaseController(http.Controller):
     @http.route('/api/phase', auth='public', method=['GET'], csrf=False)
     def get_phase(self, **kw):
         try:
-            phase = http.request.env['dlg_crm.phase'].sudo().search_read([], ['id', 'name'])
+            phase = http.request.env['dlg_crm.phase'].sudo().search_read([], ['id', 'name', 'total_orders',
+                                                                              'total_volume'])
             res = json.dumps(phase, ensure_ascii=False).encode('utf-8')
             return Response(res, content_type='application/json;charset=utf-8', status=200)
         except Exception as e:

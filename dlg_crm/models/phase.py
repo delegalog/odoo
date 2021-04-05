@@ -9,6 +9,8 @@ class Phase(models.Model):
 
     id = fields.Integer(string='ID')
     name = fields.Char(string='Nombre')
+    total_volume = fields.Integer(string='Total €/año')
+    total_orders = fields.Integer(string='Total pedidos/año')
 
     # ORM
     def f_create(self):
