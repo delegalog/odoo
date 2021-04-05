@@ -41,7 +41,7 @@
                     <field name="color"/>
                     <templates>
                         <div t-name="kanban-box">
-                            <div t-if="header"></div>
+                            <div t-if="header=='H'"></div>
                             <div t-else="">
                                 <div t-attf-class="oe_kanban_global_click">
                                     <div class="oe_kanban_details">
