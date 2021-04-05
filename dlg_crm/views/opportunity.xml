@@ -46,10 +46,20 @@
                                     <strong class="o_kanban_record_title">
                                         <field name="customer"/>
                                     </strong>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <strong class="o_kanban_record_title">
+                                        <field name="customer"/>
+                                    </strong>
                                     <div><field name="name"/></div>
                                     <div><field name="orders_year"/></div>
                                     <div><field name="volume_year"/></div>
-                                    <div><field name="image" widget="image"/></div>
                                 </div>
                             </div>
                         </t>
