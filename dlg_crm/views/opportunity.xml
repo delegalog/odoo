@@ -60,6 +60,14 @@
                     </templates>
                     </t>
                     <t t-else="">
+                        <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                </div>
+                            </div>
+                        </t>
+                       </templates>
                     </t>
                 </kanban>
             </field>
