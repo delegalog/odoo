@@ -18,7 +18,7 @@ class Opportunity(models.Model):
     image = fields.Binary(string='Imagen')
     phase = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
     color = fields.Integer()
-    header = fields.Boolean(String='cabecera')
+    header = fields.Integer(String='Cabecera')
     volume_year = fields.Integer(String='€/año (estimación)')
     orders_year = fields.Integer(String='Pedidos/año (estimación)')
 
@@ -33,10 +33,9 @@ class Opportunity(models.Model):
             'customer': 1,
             'date': str(datetime.date(2020, 8, 6)),
             'type': 'C',
-            'status': '0',
             'done': False,
             'color': 0,
-            'header': False
+            'header': 0
         }
         print(opportunity)
         self.env['dlg_crm.opportunity'].create(opportunity)
