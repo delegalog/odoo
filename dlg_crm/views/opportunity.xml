@@ -24,7 +24,7 @@
                                 <field name="notes"/>
                                 <field name="done"/>
                                 <field name="volume_year"/>
-                                <field name="order_year"/>
+                                <field name="orders_year"/>
                                 <field name="image" widget="image"/>
                             </group>
                         </group>
