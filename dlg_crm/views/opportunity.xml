@@ -17,13 +17,15 @@
                                 <field name="date"/>
                                 <field name="type"/>
                                 <field name="phase"/>
-                                <field name="header"/>
+                                <field name="volume_year"/>
+                                <field name="orders_year"/>
                             </group>
                             <group name="group_right">
                                 <field name="name"/>
                                 <field name="notes"/>
                                 <field name="done"/>
                                 <field name="image" widget="image"/>
+                                <field name="header"/>
                             </group>
                         </group>
                     </sheet>
@@ -42,9 +44,12 @@
                             <div t-attf-class="oe_kanban_global_click">
                                 <div class="oe_kanban_details">
                                     <strong class="o_kanban_record_title">
-                                        <field name="name"/>
                                         <field name="customer"/>
                                     </strong>
+                                    <field name="name"/>
+                                    <field name="image" widget="image"/>
+                                    <field name="volume_year"/>
+                                    <field name="order_year"/>
                                 </div>
                             </div>
                         </t>
@@ -63,6 +68,8 @@
                     <field name="type"/>
                     <field name="phase"/>
                     <field name="date"/>
+                    <field name="volume_year"/>
+                    <field name="orders_year"/>
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
                     <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
