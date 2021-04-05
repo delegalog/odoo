@@ -37,8 +37,8 @@
             <field name="name">view.dlg.crm.opportunity.kanban</field>
             <field name="model">dlg_crm.opportunity</field>
             <field name="arch" type="xml">
-                <t t-if="header">
                 <kanban default_group_by="phase">
+                    <t t-if="header">
                     <field name="color"/>
                     <templates>
                         <t t-name="kanban-box">
@@ -58,10 +58,10 @@
                             </div>
                         </t>
                     </templates>
+                    </t>
+                    <t t-else="">
+                    </t>
                 </kanban>
-                </t>
-                <t t-else="">
-                </t>
             </field>
         </record>
 
