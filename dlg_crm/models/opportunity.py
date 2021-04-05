@@ -20,7 +20,7 @@ class Opportunity(models.Model):
     color = fields.Integer()
     header = fields.Boolean(String='cabecera')
     volume_year = fields.Long(String='€/año (estimación)')
-    orders_year = fields.Long(String='Pedidos/año (estimación')
+    orders_year = fields.Long(String='Pedidos/año (estimación)')
 
     def toggle_state(self):
         self.done = not self.done
