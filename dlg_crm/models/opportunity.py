@@ -19,7 +19,7 @@ class Opportunity(models.Model):
     phase = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
     color = fields.Integer()
     header = fields.Boolean(String='cabecera')
-    volume_year = fields.Long(String='€/año (estimación)')
+    #volume_year = fields.Long(String='€/año (estimación)')
     orders_year = fields.Long(String='Pedidos/año (estimación)')
 
     def toggle_state(self):
@@ -36,9 +36,7 @@ class Opportunity(models.Model):
             'status': '0',
             'done': False,
             'color': 0,
-            'header': False,
-            'volume_year': 0,
-            'orders_year': 0
+            'header': False
         }
         print(opportunity)
         self.env['dlg_crm.opportunity'].create(opportunity)
