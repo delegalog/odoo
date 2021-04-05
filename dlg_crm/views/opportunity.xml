@@ -40,19 +40,8 @@
                 <kanban default_group_by="phase">
                     <field name="color"/>
                     <templates>
-                        <t t-if="not header">
                         <t t-name="kanban-box">
-                            <div t-attf-class="oe_kanban_global_click">
-                                <div class="oe_kanban_details">
-                                    <strong class="o_kanban_record_title">
-                                        <field name="customer"/>
-                                    </strong>
-                                </div>
-                            </div>
-                        </t>
-                        </t>
-                        <t t-else="">
-                        <t t-name="kanban-box">
+                            <t t-if="not header">
                             <div t-attf-class="oe_kanban_global_click">
                                 <div class="oe_kanban_details">
                                     <strong class="o_kanban_record_title">
@@ -63,7 +52,7 @@
                                     <div><field name="volume_year"/></div>
                                 </div>
                             </div>
-                        </t>
+                            </t>
                         </t>
                     </templates>
                 </kanban>
