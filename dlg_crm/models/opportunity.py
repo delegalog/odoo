@@ -24,7 +24,7 @@ class Opportunity(models.Model):
     volume_year = fields.Integer(String='€/año (estimación)')
     orders_year = fields.Integer(String='Pedidos/año (estimación)')
 
-    _order = 'header asc, priority asc'
+    _order = 'header, priority asc'
 
     def toggle_state(self):
         self.done = not self.done
