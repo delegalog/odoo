@@ -41,6 +41,9 @@
             <field name="arch" type="xml">
                 <kanban default_group_by="phase">
                     <field name="color"/>
+                    <progressbar fields="activity_state" colors='{"planned": "éxito", "today": "aviso",
+                    "overdue": "retrasada"}' />
+                    <field name="show"/>
                     <templates>
                         <div t-name="kanban-box">
                             <div t-attf-class="oe_kanban_global_click">
@@ -51,9 +54,6 @@
                                     <div>Descripción: <field name="name"/></div>
                                     <div>Prioridad <field name="priority"/></div>
                                     <div><field name="orders_year"/> pedidos/año</div>
-                                    <t t-if="dlg_crm.opportunity.show == True">
-                                        <div><field name="volume_year"/> --</div>
-                                    </t>
                                     <div><field name="volume_year"/> €/año</div>
                                 </div>
                             </div>
