@@ -44,20 +44,14 @@
                         <div t-name="kanban-box">
                             <div t-attf-class="oe_kanban_global_click">
                                 <div class="oe_kanban_details">
+                                    <t t-if="header===''">
                                     <strong class="o_kanban_record_title">
                                         <field name="customer"/>
                                     </strong>
-                                    <div><field name="name"/></div>
-                                    <div t-if="orders_year!=0">
-                                        <t t-esc="orders_year">
-                                             pedidos/año
-                                        </t>
-                                    </div>
-                                    <div t-if="volume_year!=0">
-                                        <t t-esc="volume_year">
-                                             €/año
-                                        </t>
-                                    </div>
+                                    <div>Descripción: <field name="name"/></div>
+                                    <div><field name="orders_year"/> pedidos/año</div>
+                                    <div><field name="volume_year"/> €/año</div>
+                                    </t>
                                 </div>
                             </div>
                         </div>
