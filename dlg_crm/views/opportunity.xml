@@ -44,7 +44,7 @@
                         <div t-name="kanban-box">
                             <div t-attf-class="oe_kanban_global_click">
                                 <div class="oe_kanban_details">
-                                    <div t-if="header==='H'">
+                                    <div t-if="header=='H'">
                                     <strong class="o_kanban_record_title">
                                         <field name="customer"/>
                                     </strong>
