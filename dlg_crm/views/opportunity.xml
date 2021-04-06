@@ -49,6 +49,7 @@
                                         <field name="customer"/>
                                     </strong>
                                     <div>Descripción: <field name="name"/></div>
+                                    <div>Prioridad <field name="priority"/></div>
                                     <div><field name="orders_year"/> pedidos/año</div>
                                     <div t-if="show">
                                         <t t-esc="volume_year"/>
