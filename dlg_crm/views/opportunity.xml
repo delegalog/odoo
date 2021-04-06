@@ -51,9 +51,9 @@
                                     <div>Descripción: <field name="name"/></div>
                                     <div>Prioridad <field name="priority"/></div>
                                     <div><field name="orders_year"/> pedidos/año</div>
-                                    <div t-if="show!=True">
+                                    <t t-if="show == True">
                                         <div><field name="volume_year"/> --</div>
-                                    </div>
+                                    </t>
                                     <div><field name="volume_year"/> €/año</div>
                                 </div>
                             </div>
