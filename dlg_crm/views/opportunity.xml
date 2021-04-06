@@ -39,14 +39,12 @@
             <field name="name">view.dlg.crm.opportunity.kanban</field>
             <field name="model">dlg_crm.opportunity</field>
             <field name="arch" type="xml">
-                <kanban default_group_by="phase">
+                <kanban default_group_by="phase" class="o_kanban_small_column o_opportunity_kanban"
+                archibable="false">
                     <field name="color"/>
-                    <progressbar fields="activity_state" colors='{"planned": "éxito", "today": "aviso",
-                    "overdue": "retrasada"}'/>
                     <templates>
                         <div t-name="kanban-box">
-                            <div t-attf-class="oe_kanban_global_click">
-                                <div class="oe_kanban_details">
+                            <div t-attf-class="oe_kanban_global_click"><div class="oe_kanban_details">
                                     <strong class="o_kanban_record_title">
                                         <field name="customer"/>
                                     </strong>
