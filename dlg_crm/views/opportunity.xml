@@ -49,8 +49,8 @@
                                     </strong>
                                     <div>Descripción: <field name="name"/></div>
                                     <div><field name="orders_year"/> pedidos/año</div>
-                                    <div t-if="record.header.value==H">
-                                        <t t-esc="record.volume_year.value"/>
+                                    <div t-if="header==H">
+                                        <t t-esc="volume_year"/>
                                     </div>
                                     <div><field name="volume_year"/> €/año</div>
                                 </div>
