@@ -23,6 +23,7 @@ class Opportunity(models.Model):
                              ('4', 'Baja')], string='Prioridad', required=True)
     volume_year = fields.Integer(String='€/año (estimación)')
     orders_year = fields.Integer(String='Pedidos/año (estimación)')
+    show = fields.Boolean('Mostrar')
 
     _order = 'header asc, priority asc'
 
