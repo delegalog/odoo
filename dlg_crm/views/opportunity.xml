@@ -27,6 +27,7 @@
                                 <field name="priority"/>
                                 <field name="image" widget="image"/>
                                 <field name="header"/>
+                                <field name="show"/>
                             </group>
                         </group>
                     </sheet>
@@ -49,7 +50,7 @@
                                     </strong>
                                     <div>Descripción: <field name="name"/></div>
                                     <div><field name="orders_year"/> pedidos/año</div>
-                                    <div t-if="header==H">
+                                    <div t-if="show">
                                         <t t-esc="volume_year"/>
                                     </div>
                                     <div><field name="volume_year"/> €/año</div>
