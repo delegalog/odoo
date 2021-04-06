@@ -42,8 +42,7 @@
                 <kanban default_group_by="phase">
                     <field name="color"/>
                     <progressbar fields="activity_state" colors='{"planned": "éxito", "today": "aviso",
-                    "overdue": "retrasada"}' />
-                    <field name="show"/>
+                    "overdue": "retrasada"}'/>
                     <templates>
                         <div t-name="kanban-box">
                             <div t-attf-class="oe_kanban_global_click">
