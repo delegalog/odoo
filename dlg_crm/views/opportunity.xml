@@ -66,11 +66,13 @@
                                             <field name="priority" widget="priority" groups="base.group_user"/>
                                         </div>
                                         <div class="oe_kanban_bottom_right">
-                                            <table border="1">
+                                            <table>
                                                 <tr>
                                                     <td>
                                                         <div><field name="orders_year"/> pedidos/año</div>
                                                     </td>
+                                                 </tr>
+                                                <tr>
                                                     <td>
                                                         <div><field name="volume_year" widget="monetary"/> €/año</div>
                                                     </td>
