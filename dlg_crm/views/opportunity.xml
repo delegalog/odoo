@@ -35,8 +35,9 @@
                             <page string="Acciones" name="actions">
                                 <field name="actions" mode="tree">
                                     <tree editable="bottom" string="Acción">
-                                        <field name="name" value=""/>
                                         <field name="customer" value="dlg_crm.opportunity.customer"/>
+                                        <field name="opportunity" value="dlg_crm.opportunity.name"/>
+                                        <field name="name" value=""/>
                                         <field name="date_event"/>
                                     </tree>
                                 </field>
