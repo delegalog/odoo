@@ -32,3 +32,25 @@ class PhaseController(http.Controller):
             return Response(res, content_type='application/json;charset=utf-8', status=200)
         except Exception as e:
             return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
+
+
+class ActionController(http.Controller):
+
+    @http.route('/api/action', auth='public', method=['GET'], csrf=False)
+    def get_phase(self, **kw):
+        try:
+            action = http.request.env['dlg_crm.action'].sudo().search_read([], ['name',
+                                                                                'notes',
+                                                                                'customer',
+                                                                                'date',
+                                                                                'date_event',
+                                                                                'date_end',
+                                                                                'type',
+                                                                                'done',
+                                                                                'image',
+                                                                                'opportunity',
+                                                                                'color'])
+            res = json.dumps(phase, ensure_ascii=False).encode('utf-8')
+            return Response(res, content_type='application/json;charset=utf-8', status=200)
+        except Exception as e:
+            return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
