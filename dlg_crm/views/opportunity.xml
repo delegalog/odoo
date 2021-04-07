@@ -63,10 +63,12 @@
                                             <field name="priority" widget="priority" groups="base.group_user"/>
                                         </div>
                                     </div>
-                                    <div>Descripción: <field name="name"/></div>
-                                    <div>Prioridad <field name="priority"/></div>
-                                    <div><field name="orders_year"/> pedidos/año</div>
-                                    <div><field name="volume_year"/> €/año</div>
+                                    <div class="oe_kanban_bottom_right">
+                                        <div>Descripción: <field name="name"/></div>
+                                        <div>Prioridad <field name="priority"/></div>
+                                        <div><field name="orders_year"/> pedidos/año</div>
+                                        <div><field name="volume_year"/> €/año</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
