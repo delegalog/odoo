@@ -118,8 +118,6 @@
                     <group expand="0" string="Group By">
                         <filter name="groupby_type" string="Fase" domain="[]" context="{'group_by':'phase'}"
                                 help="Agrupar por situación"/>
-                        <filter name="groupby_type" string="Tipo" domain="[]" context="{'group_by':'type'}"
-                                help="Agrupar por tipo"/>
                         <filter name="groupby_date" string="Fecha" context="{'group_by':'date:year'}"
                                 help="Agrupar por fecha"/>
                     </group>
