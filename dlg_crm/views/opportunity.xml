@@ -31,6 +31,12 @@
                                 <field name="show"/>
                             </group>
                         </group>
+                        <notebook>
+                            <page string="Acciones" name="action">
+                                <form>
+                                </form>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
