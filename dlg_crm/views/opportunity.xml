@@ -34,8 +34,8 @@
                         <notebook>
                             <page string="Acciones" name="actions">
                                 <field name="actions" mode="tree"
-                                       domain="[('customer', '=', 'dlg_crm.opportunity.customer')]"
-                                       context="[('customer', '=', 'dlg_crm.opportunity.customer')]">
+                                       domain="[('customer', '=', 'customer')]"
+                                       context="[('customer', '=', 'customer')]">
                                     <tree editable="bottom" string="Acción">
                                         <field name="customer"/>
                                         <field name="opportunity"/>
