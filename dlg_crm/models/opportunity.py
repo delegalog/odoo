@@ -13,7 +13,7 @@ PRIORITIES = [
 
 class Opportunity(models.Model):
     _name = 'dlg_crm.opportunity'
-    _description = 'Oportunidad'
+    _description = 'Oportunidades'
 
     id = fields.Integer(string='ID')
     name = fields.Char(string='Descripción')

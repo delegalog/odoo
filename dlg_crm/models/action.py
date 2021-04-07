@@ -6,7 +6,7 @@ import datetime
 
 class Action(models.Model):
     _name = 'dlg_crm.action'
-    _description = 'Acción'
+    _description = 'Acciones'
 
     name = fields.Char(string='Descripción')
     notes = fields.Text(string='Notas')
