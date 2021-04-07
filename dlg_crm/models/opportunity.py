@@ -29,7 +29,7 @@ class Opportunity(models.Model):
     volume_year = fields.Integer(String='€/año (estimación)')
     orders_year = fields.Integer(String='Pedidos/año (estimación)')
     show = fields.Boolean('Mostrar')
-    action = fields.One2many('dlg_crm.action', 'name', string='Actions',
+    actions = fields.One2many('dlg_crm.action', 'name', string='Actions',
                              states={'cancel': [('readonly', True)], 'done': [('readonly', True)]}, copy=True,
                              auto_join=True)
 

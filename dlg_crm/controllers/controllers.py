@@ -15,7 +15,7 @@ class OpportunityController(http.Controller):
                                                                                           'priority',
                                                                                           'show', 'orders_year',
                                                                                           'volume_year',
-                                                                                          'action'])
+                                                                                          'actions'])
             res = json.dumps(opportunity, ensure_ascii=False).encode('utf-8')
             return Response(res, content_type='application/json;charset=utf-8', status=200)
         except Exception as e:

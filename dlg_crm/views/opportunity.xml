@@ -33,7 +33,17 @@
                         </group>
                         <notebook>
                             <page string="Acciones" name="action">
-
+                                <field colspan="4" name="actions" nolabel="1" widget="one2many_list">
+                                    <tree string="Acciones" editable="bottom">
+                                        <field name="customer"/>
+                                        <field name="name"/>
+                                    </tree>
+                                    <form string="Accion">
+                                        <group colspan="4" col="6">
+                                            <field name="name"/>
+                                        </group>
+                                    </form>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
