@@ -59,23 +59,18 @@
                                     </a>
                                     <div class="dropdown-menu" role="menu">
                                         <t t-if="widget.editable"><a role="menuitem" type="edit" class="dropdown-item">Edit</a></t>
-                                        <ul class="oe_kanban_colorpicker" data-field="color"/>
                                     </div>
                                 </div>
                                 <div class="oe_kanban_content">
                                     <strong class="o_kanban_record_title">
                                         <field name="customer"/>
                                     </strong>
-                                    <div>
-                                        <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
-                                    </div>
                                     <div class="o_kanban_record_bottom">
                                         <div class="oe_kanban_bottom_left">
                                             <field name="priority" widget="priority" groups="base.group_user"/>
-                                            <field name="activity_ids" widget="kanban_activity"/>
                                         </div>
                                         <div class="oe_kanban_bottom_right">
-                                            <field name="user_id" widget="many2one_avatar_user"/>
+                                            <field name="orders_year" widget="many2one_avatar_user"/>
                                         </div>
                                     </div>
 
