@@ -50,7 +50,7 @@ class ActionController(http.Controller):
                                                                                 'image',
                                                                                 'opportunity',
                                                                                 'color'])
-            res = json.dumps(phase, ensure_ascii=False).encode('utf-8')
+            res = json.dumps(action, ensure_ascii=False).encode('utf-8')
             return Response(res, content_type='application/json;charset=utf-8', status=200)
         except Exception as e:
             return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
