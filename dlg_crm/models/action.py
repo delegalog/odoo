@@ -20,7 +20,6 @@ class Action(models.Model):
     image = fields.Binary(string='Imagen')
     opportunity = fields.Many2one('dlg_crm.opportunity', string="Oportunidad", required=False)
     color = fields.Integer()
-
     _order = 'date_event asc'
 
     #def toggle_state(self):
