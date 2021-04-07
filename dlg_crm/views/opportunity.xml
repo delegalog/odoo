@@ -7,7 +7,7 @@
                 <form string="Oportunidad">
                     <sheet>
                         <div class="oe_button_box" name="button_box">
-                            <button name="f_create_from_opp" type="object" class="oe_action_button"
+                            <button name="f_create" type="object" class="oe_action_button"
                                     string="Crear Acción" icon="fa-phone"
                             />
                         </div>
