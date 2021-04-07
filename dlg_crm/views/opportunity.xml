@@ -33,7 +33,11 @@
                         </group>
                         <notebook>
                             <page string="Acciones" name="actions">
-
+                                <field name="actions" mode="tree">
+                                    <tree editable="bottom" string="Acción">
+                                        <field name="name"/>
+                                    </tree>
+                                </field>
                             </page>
                         </notebook>
                     </sheet>
