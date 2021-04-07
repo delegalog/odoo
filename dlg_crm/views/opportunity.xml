@@ -69,9 +69,6 @@
                                         <div class="oe_kanban_bottom_left">
                                             <field name="priority" widget="priority" groups="base.group_user"/>
                                         </div>
-                                        <div class="oe_kanban_bottom_right">
-                                            <field name="orders_year" widget="many2one_avatar_user"/>
-                                        </div>
                                     </div>
 
 
