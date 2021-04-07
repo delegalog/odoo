@@ -7,8 +7,6 @@
                 <form string="Oportunidad">
                     <sheet>
                         <div class="oe_button_box" name="button_box">
-                            <button name="f_create" type="object" class="oe_action_button"
-                                    string="Crear Acción" icon="fa-phone"/>
                             <button name="toggle_state" type="object" class="oe_stat_button"
                                     string="Oportunidad realizada" icon="fa-play-circle"/>
                         </div>
