@@ -25,6 +25,7 @@
                                 <field name="notes"/>
                                 <field name="done"/>
                                 <field name="priority"/>
+                                <field name="id"/>
                                 <field name="header"/>
                                 <field name="show"/>
                             </group>
