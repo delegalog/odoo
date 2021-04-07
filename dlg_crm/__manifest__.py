@@ -26,9 +26,11 @@
         #'security/ir.model.access.csv',
         'views/phase.xml',
         'views/opportunity.xml',
+        'views/action.xml',
         'views/templates.xml',
         'reports/phase.xml',
         'reports/opportunity.xml',
+        'reports/action.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
