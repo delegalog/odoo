@@ -40,11 +40,13 @@
             <field name="model">dlg_crm.opportunity</field>
             <field name="arch" type="xml">
                 <kanban default_group_by="phase" class="o_kanban_small_column o_opportunity_kanban"
-                archibable="false">
+                        on_create="quick_create"
+                        quick_create_view="view_dlg_crm_opportunity_form" archivable="false" sample="1">
                     <field name="color"/>
                     <templates>
                         <div t-name="kanban-box">
-                            <div t-attf-class="oe_kanban_global_click"><div class="oe_kanban_details">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
                                     <strong class="o_kanban_record_title">
                                         <field name="customer"/>
                                     </strong>
