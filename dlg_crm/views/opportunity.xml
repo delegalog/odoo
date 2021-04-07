@@ -36,7 +36,7 @@
                                 <field name="actions" mode="tree">
                                     <tree editable="bottom" string="Acción">
                                         <field name="name"/>
-                                        <field name="customer"/>
+                                        <field name="customer">customer</field>
                                         <field name="date_event"/>
                                     </tree>
                                 </field>
