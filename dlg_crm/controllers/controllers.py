@@ -47,7 +47,7 @@ class ActionController(http.Controller):
                                                                                 'date_event',
                                                                                 'date_end',
                                                                                 'type',
-                                                                                'done',
+                                                                                #'done',
                                                                                 'image',
                                                                                 'opportunity',
                                                                                 'color'])

@@ -24,7 +24,6 @@
                                 <field name="name"/>
                                 <field name="type"/>
                                 <field name="notes"/>
-                                <field name="done"/>
                                 <field name="id"/>
                             </group>
                         </group>
