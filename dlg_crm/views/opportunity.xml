@@ -36,6 +36,8 @@
                                 <field name="actions" mode="tree">
                                     <tree editable="bottom" string="Acción">
                                         <field name="name"/>
+                                        <field name="customer"/>
+                                        <field name="date_event"/>
                                     </tree>
                                 </field>
                             </page>
@@ -69,7 +71,7 @@
                                         <field name="customer"/>
                                     </strong>
                                     <div class="o_kanban_record_subtitle">
-                                        <div>Descripción: <field name="name"/></div>
+                                        <field name="name"/>
                                     </div>
                                     <div class="o_kanban_record_bottom">
                                         <div class="oe_kanban_bottom_left">
