@@ -31,7 +31,7 @@ class Opportunity(models.Model):
     orders_year = fields.Integer(String='Pedidos/año (estimación)')
     show = fields.Boolean('Mostrar')
 
-    _order = 'header asc, priority asc'
+    _order = 'header asc, priority desc'
 
     def toggle_state(self):
         self.done = not self.done

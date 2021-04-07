@@ -43,13 +43,6 @@
                         on_create="quick_create"
                         quick_create_view="view_dlg_crm_opportunity_form" archivable="false" sample="1">
                     <field name="color"/>
-                    <field name="name"/>
-                    <field name="customer"/>
-                    <field name="date"/>
-                    <field name="phase"/>
-                    <field name="priority"/>
-                    <field name="volume_year"/>
-                    <field name="orders_year"/>
                     <templates>
                         <div t-name="kanban-box">
                             <div t-attf-class="#{!selection_mode ? kanban_color(record.color.raw_value) : ''} oe_kanban_global_click">
