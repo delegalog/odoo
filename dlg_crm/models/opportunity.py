@@ -3,6 +3,13 @@
 from odoo import models, fields, api
 import datetime
 
+PRIORITIES = [
+    ('0', 'Baja'),
+    ('1', 'Media'),
+    ('2', 'Alta'),
+    ('3', 'Muy Alta'),
+]
+
 
 class Opportunity(models.Model):
     _name = 'dlg_crm.opportunity'
@@ -19,8 +26,7 @@ class Opportunity(models.Model):
     phase = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
     color = fields.Integer()
     header = fields.Char('Cabecera')
-    priority = fields.Selection([('1', 'Muy Alta'), ('2', 'Alta'), ('3', 'Normal'),
-                             ('4', 'Baja')], string='Prioridad', required=True)
+    priority = fields.Selection(PRIORITIES, string='Prioridad', index=True, default=PRIORITIES[0][0])
     volume_year = fields.Integer(String='€/año (estimación)')
     orders_year = fields.Integer(String='Pedidos/año (estimación)')
     show = fields.Boolean('Mostrar')
@@ -30,7 +36,7 @@ class Opportunity(models.Model):
     def toggle_state(self):
         self.done = not self.done
 
-    #ORM
+    # ORM
     def f_create(self):
         opportunity = {
             'name': 'ORM test',
@@ -63,7 +69,6 @@ class Opportunity(models.Model):
 
 
 class OpportunityReport(models.AbstractModel):
-
     _name = 'report.dlg_crm.report_opportunity_card'
 
     @api.model
