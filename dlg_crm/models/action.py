@@ -33,8 +33,6 @@ class Action(models.Model):
             'type': 'C',
             'done': False,
             'color': 0,
-            'header': '',
-            'priority': 'C'
         }
         print(action)
         self.env['dlg_crm.action'].create(action)
