@@ -13,14 +13,13 @@ PRIORITIES = [
 
 class Opportunity(models.Model):
     _name = 'dlg_crm.opportunity'
-    _description = 'Opportunity'
+    _description = 'Oportunidad'
 
+    id = fields.Integer(string='ID')
     name = fields.Char(string='Descripción')
     notes = fields.Text(string='Notas')
     customer = fields.Many2one(string='Cliente', comodel_name='res.partner')
-    date = fields.Datetime(string='Fecha')
-    type = fields.Selection([('C', 'Call'), ('P', 'Presencial'), ('T', 'Telefónico'),
-                             ('G', '-')], string='Tipo', required=True)
+    date = fields.Datetime(string='Fecha creación')
     done = fields.Boolean(string='Realizada', readonly=True)
     image = fields.Binary(string='Imagen')
     phase = fields.Many2one('dlg_crm.phase', string="Fase", required=True)
@@ -39,15 +38,13 @@ class Opportunity(models.Model):
     # ORM
     def f_create(self):
         opportunity = {
+            'date': datetime.date.today(),
             'name': 'ORM test',
             'notes': 'ORM test',
-            'customer': 1,
-            'date': str(datetime.date(2020, 8, 6)),
-            'type': 'C',
             'done': False,
             'color': 0,
             'header': '',
-            'priority': 'C'
+            'priority': '1'
         }
         print(opportunity)
         self.env['dlg_crm.opportunity'].create(opportunity)

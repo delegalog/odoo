@@ -10,7 +10,7 @@ class OpportunityController(http.Controller):
     def get_opportunity(self, **kw):
         try:
             opportunity = http.request.env['dlg_crm.opportunity'].sudo().search_read([], ['id', 'name', 'customer',
-                                                                                          'notes', 'done', 'image',
+                                                                                          'notes', 'image',
                                                                                           'phase', 'done', 'header',
                                                                                           'priority',
                                                                                           'show', 'orders_year',

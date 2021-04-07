@@ -5,7 +5,7 @@ from odoo import models, fields, api
 
 class Phase(models.Model):
     _name = 'dlg_crm.phase'
-    _description = 'Phase'
+    _description = 'Fase'
 
     id = fields.Integer(string='ID')
     name = fields.Char(string='Nombre')

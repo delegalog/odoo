@@ -15,7 +15,6 @@
                             <group name="group_left">
                                 <field name="customer"/>
                                 <field name="date"/>
-                                <field name="type"/>
                                 <field name="phase"/>
                                 <field name="orders_year"/>
                                 <field name="volume_year"/>
