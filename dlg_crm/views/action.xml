@@ -18,13 +18,13 @@
                                 <field name="date"/>
                                 <field name="date_event"/>
                                 <field name="date_end"/>
+                                <field name="image" widget="image"/>
                             </group>
                             <group name="group_right">
                                 <field name="name"/>
                                 <field name="type"/>
                                 <field name="notes"/>
                                 <field name="done"/>
-                                <field name="image" widget="image"/>
                             </group>
                         </group>
                     </sheet>

@@ -18,13 +18,13 @@
                                 <field name="phase"/>
                                 <field name="orders_year"/>
                                 <field name="volume_year"/>
+                                <field name="image" widget="image"/>
                             </group>
                             <group name="group_right">
                                 <field name="name"/>
                                 <field name="notes"/>
                                 <field name="done"/>
                                 <field name="priority"/>
-                                <field name="image" widget="image"/>
                                 <field name="header"/>
                                 <field name="show"/>
                             </group>
