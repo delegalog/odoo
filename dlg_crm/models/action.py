@@ -15,10 +15,10 @@ class Action(models.Model):
     date_event = fields.Datetime(string='Fecha evento')
     date_end = fields.Datetime(string='Fecha fin')
     type = fields.Selection([('C', 'Call'), ('R', 'Reunión'), ('L', 'Llamada'),
-                             ('D', 'Comida'), ('E', 'email')], string='Tipo', required=True)
-    done = fields.Boolean(string='Finalizada', readonly=True)
+                             ('D', 'Comida'), ('E', 'email')], string='Tipo', required=False)
+    done = fields.Boolean(string='Finalizada', readonly=False)
     image = fields.Binary(string='Imagen')
-    #opportunity = fields.Many2one('dlg_crm.opportunity', string="Oportunidad", required=True)
+    opportunity = fields.Many2one('dlg_crm.opportunity', string="Oportunidad", required=False)
     color = fields.Integer()
 
     _order = 'date_event asc'
