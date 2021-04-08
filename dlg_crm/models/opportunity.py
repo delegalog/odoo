@@ -56,6 +56,10 @@ class Opportunity(models.Model):
         }
         self.env['dlg_crm.action'].create(values)
 
+    def f_update_action(self):
+        opportunity_b = self.env['dlg_crm.action'].browse([8])
+        print('browse()', opportunity_b, opportunity_b.name)
+
     def f_search_update(self):
         opportunity = self.env['dlg_crm.opportunity'].search([('name', '=', 'ORM test')])
         print('search()', opportunity, opportunity.name)

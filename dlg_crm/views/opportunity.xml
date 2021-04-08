@@ -34,7 +34,7 @@
                         </group>
                         <notebook>
                             <page string="Acciones" name="actions">
-                                <field name="actions" mode="tree" default_order="date_event" delete="true" open="True">
+                                <field name="actions" mode="tree" default_order="date_event" delete="true" edit="True">
                                     <tree editable="bottom" string="Acción">
                                         <field name="customer"/>
                                         <field name="opportunity"/>
@@ -42,6 +42,7 @@
                                         <field name="date_event"/>
                                         <field name="opportunity_id"/>
                                         <field name="id"/>
+                                        <button name="f_update_action" string="Editar" class="oe_highlight" type="object"/>
                                     </tree>
                                 </field>
                             </page>
