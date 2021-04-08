@@ -9,7 +9,7 @@
                         <div class="oe_button_box" name="button_box">
                             <button name="f_create_action" type="object" class="oe_action_button"
                                     string="Crear Acción" icon="fa-phone"
-                                    context="{'default_actions':id, 'default_customer':customer, 'default_opportunity':opportunity}"/>
+                                    context="{'default_actions':id, 'default_customer':customer, 'default_opportunity':name}"/>
                             <button name="toggle_state" type="object" class="oe_stat_button"
                                     string="Oportunidad realizada" icon="fa-play-circle"/>
                         </div>
