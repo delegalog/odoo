@@ -37,9 +37,9 @@
                                     <tree editable="bottom" string="Acción">
                                         <field name="customer"/>
                                         <field name="opportunity"/>
-                                        <field name="notes"/>
                                         <field name="name"/>
                                         <field name="date_event"/>
+                                        <field name="opportunity_id"/>
                                     </tree>
                                 </field>
                             </page>
