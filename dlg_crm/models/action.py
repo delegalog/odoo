@@ -9,6 +9,7 @@ class Action(models.Model):
     _description = 'Acciones'
 
     opportunity = fields.Many2one('dlg_crm.opportunity', string="Oportunidad", required=False)
+    opportunity_id = fields.Integer()
     id = fields.Integer()
     name = fields.Char(string='Descripción')
     notes = fields.Text(string='Notas')
