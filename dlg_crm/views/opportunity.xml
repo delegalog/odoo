@@ -9,7 +9,7 @@
                         <div class="oe_button_box" name="button_box">
                             <button name="f_create_action" type="object" class="oe_action_button"
                                     string="Crear Acción" icon="fa-phone"
-                                    context="{'default_customer':customer, 'default_opportunity':opportunity}"/>
+                                    context="{'default_actions':id, 'default_customer':customer, 'default_opportunity':opportunity}"/>
                             <button name="toggle_state" type="object" class="oe_stat_button"
                                     string="Oportunidad realizada" icon="fa-play-circle"/>
                         </div>
@@ -113,8 +113,6 @@
                     <field name="phase"/>
                     <field name="priority"/>
                     <field name="date"/>
-                    <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
-                    <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
                 </tree>
             </field>
