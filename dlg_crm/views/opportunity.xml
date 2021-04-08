@@ -42,7 +42,6 @@
                                         <field name="date_event"/>
                                         <field name="opportunity_id"/>
                                         <field name="id"/>
-                                        <button name="f_update_action" string="Editar" class="oe_highlight" type="object"/>
                                     </tree>
                                 </field>
                             </page>
