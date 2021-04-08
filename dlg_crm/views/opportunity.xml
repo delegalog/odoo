@@ -112,7 +112,8 @@
                     <field name="phase"/>
                     <field name="priority"/>
                     <field name="date"/>
-                    <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
+                    <button name="f_create" string="Crear" class="oe_highlight" type="object"
+                            context="{'customer': customer, 'opportunity': opportunity}"/>/>
                     <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
                 </tree>

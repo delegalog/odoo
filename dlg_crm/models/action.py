@@ -38,18 +38,6 @@ class Action(models.Model):
         print(action)
         self.env['dlg_crm.action'].create(action)
 
-    def create(self, args):
-        action = {
-            'date': datetime.date.today(),
-            'type': 'C',
-            'done': False,
-            'color': 0,
-            'opportunity': args[0],
-            'customer': args[1]
-        }
-        print(action)
-        self.env['dlg_crm.action'].create(action)
-
     def f_search_update(self):
         action = self.env['dlg_crm.action'].search([('name', '=', 'ORM test')])
         print('search()', action, action.name)
