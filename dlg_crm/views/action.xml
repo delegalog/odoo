@@ -46,7 +46,6 @@
                     <field name="date_end"/>
                     <field name="name"/>
                     <field name="type"/>
-                    <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
                     <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
                 </tree>
