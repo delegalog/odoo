@@ -30,9 +30,6 @@ class Action(models.Model):
         self.done = not self.done
 
     # ORM
-    def f_create(self, args):
-        self.env['dlg_crm.action'].create(self, args)
-
     def f_search_update(self):
         action = self.env['dlg_crm.action'].search([('name', '=', 'ORM test')])
         print('search()', action, action.name)
