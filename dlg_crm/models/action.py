@@ -32,10 +32,8 @@ class Action(models.Model):
     # ORM
     def f_create(self):
         action = {
-            'date': datetime.date.today(),
-            'type': 'C',
-            'done': False,
-            'color': 0,
+            'opportunity': 'dlg_crm.opportunity.name',
+            'customer': 'dlg_crm.opportunity.customer'
         }
         print(action)
         self.env['dlg_crm.action'].create(action)
