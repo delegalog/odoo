@@ -50,12 +50,23 @@ class Opportunity(models.Model):
         print(opportunity)
         self.env['dlg_crm.opportunity'].create(opportunity)
 
-    @staticmethod
-    def f_create_action():
+    def f_create_action(self):
         action = {
             'date': datetime.date.today()
         }
         print(action)
+        self.env['dlg_crm.action'].create(action)
+
+    @staticmethod
+    def f_create_action_2():
+        return {
+            'name': 'action',
+            'view_type': 'form',
+            'view_mode': 'form',
+            #'res_model': 'my.form',
+            'view_id': False,
+            'type': 'ir.actions.act_window',
+        }
 
     def f_update_action(self):
         action = self.env['dlg_crm.action'].browse([8])
