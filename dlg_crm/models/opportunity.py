@@ -50,12 +50,12 @@ class Opportunity(models.Model):
         print(opportunity)
         self.env['dlg_crm.opportunity'].create(opportunity)
 
-    def f_create_action(self):
+    @staticmethod
+    def f_create_action():
         action = {
             'date': datetime.date.today()
         }
         print(action)
-        self.env['dlg_crm.action'].create(action)
 
     def f_update_action(self):
         action = self.env['dlg_crm.action'].browse([8])
