@@ -8,8 +8,8 @@ class Action(models.Model):
     _name = 'dlg_crm.action'
     _description = 'Acciones'
 
-    opportunity = fields.Many2one('dlg_crm.opportunity', 'name', string="Oportunidad", required=False)
-    opportunity_id = fields.Integer(string="ID oportunidad")
+    opportunity = fields.Text(string='Oportunidad', readonly=True)
+    opportunity_id = fields.Integer(string="ID oportunidad", readonly=True)
     id = fields.Integer()
     name = fields.Char(string='Descripción')
     notes = fields.Text(string='Notas')
