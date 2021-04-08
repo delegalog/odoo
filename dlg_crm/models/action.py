@@ -8,6 +8,7 @@ class Action(models.Model):
     _name = 'dlg_crm.action'
     _description = 'Acciones'
 
+    id = fields.Integer()
     name = fields.Char(string='Descripción')
     notes = fields.Text(string='Notas')
     customer = fields.Many2one(string='Cliente', comodel_name='res.partner')

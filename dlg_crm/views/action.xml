@@ -26,6 +26,7 @@
                                 <field name="notes"/>
                                 <field name="done"/>
                                 <field name="id"/>
+                                <field name="done"/>
                             </group>
                         </group>
                     </sheet>

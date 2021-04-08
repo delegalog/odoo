@@ -40,14 +40,15 @@ class ActionController(http.Controller):
     @http.route('/api/action', auth='public', method=['GET'], csrf=False)
     def get_phase(self, **kw):
         try:
-            action = http.request.env['dlg_crm.action'].sudo().search_read([], ['name',
+            action = http.request.env['dlg_crm.action'].sudo().search_read([], ['id',
+                                                                                'name',
                                                                                 'notes',
                                                                                 'customer',
                                                                                 'date',
                                                                                 'date_event',
                                                                                 'date_end',
                                                                                 'type',
-                                                                                #'done',
+                                                                                'done',
                                                                                 'image',
                                                                                 'opportunity',
                                                                                 'color'])
