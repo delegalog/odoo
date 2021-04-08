@@ -34,13 +34,14 @@
                         </group>
                         <notebook>
                             <page string="Acciones" name="actions">
-                                <field name="actions" mode="tree" default_order="date_event" delete="true">
+                                <field name="actions" mode="tree" default_order="date_event" delete="true" open="True">
                                     <tree editable="bottom" string="Acción">
                                         <field name="customer"/>
                                         <field name="opportunity"/>
                                         <field name="name"/>
                                         <field name="date_event"/>
                                         <field name="opportunity_id"/>
+                                        <field name="id"/>
                                     </tree>
                                 </field>
                             </page>
