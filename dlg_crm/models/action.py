@@ -36,7 +36,7 @@ class Action(models.Model):
             'customer': 'dlg_crm.opportunity.customer'
         }
         print(action)
-        self.env['dlg_crm.action'].create(action)
+        self.env['dlg_crm.action'].create(self, action)
 
     def create(self):
         action = {
@@ -48,7 +48,7 @@ class Action(models.Model):
             'customer': 'dlg_crm.opportunity.customer'
         }
         print(action)
-        self.env['dlg_crm.action'].create(action)
+        self.env['dlg_crm.action'].create(self, action)
 
     def f_search_update(self):
         action = self.env['dlg_crm.action'].search([('name', '=', 'ORM test')])
