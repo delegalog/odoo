@@ -8,6 +8,7 @@ class Action(models.Model):
     _name = 'dlg_crm.action'
     _description = 'Acciones'
 
+    opportunity = fields.Many2one('dlg_crm.opportunity', string="Oportunidad", required=False)
     id = fields.Integer()
     name = fields.Char(string='Descripción')
     notes = fields.Text(string='Notas')
@@ -19,7 +20,7 @@ class Action(models.Model):
                              ('D', 'Comida'), ('E', 'email')], string='Tipo', required=False)
     done = fields.Boolean(string='Finalizada')
     image = fields.Binary(string='Imagen')
-    opportunity = fields.Many2one('dlg_crm.opportunity', string="Oportunidad", required=False)
+
     color = fields.Integer()
 
     _order = 'date_event asc'
