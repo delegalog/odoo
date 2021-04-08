@@ -9,7 +9,7 @@ class Action(models.Model):
     _description = 'Acciones'
 
     opportunity = fields.Many2one('dlg_crm.opportunity', string="Oportunidad", required=False)
-    opportunity_id = fields.Integer()
+    opportunity_id = fields.Integer(string="ID oportunidad")
     id = fields.Integer()
     name = fields.Char(string='Descripción')
     notes = fields.Text(string='Notas')
@@ -36,6 +36,18 @@ class Action(models.Model):
             'type': 'C',
             'done': False,
             'color': 0,
+        }
+        print(action)
+        self.env['dlg_crm.action'].create(action)
+
+    def create(self):
+        action = {
+            'date': datetime.date.today(),
+            'type': 'C',
+            'done': False,
+            'color': 0,
+            'opportunity': 'dlg_crm.opportunity.name',
+            'customer': 'dlg_crm.opportunity.customer'
         }
         print(action)
         self.env['dlg_crm.action'].create(action)
