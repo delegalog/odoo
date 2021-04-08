@@ -39,6 +39,7 @@
             <field name="model">dlg_crm.action</field>
             <field name="arch" type="xml">
                 <tree string="Acción">
+                    <field name="id"/>
                     <field name="customer"/>
                     <field name="opportunity"/>
                     <field name="date"/>
