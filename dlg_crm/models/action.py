@@ -30,6 +30,17 @@ class Action(models.Model):
         self.done = not self.done
 
     # ORM
+    @staticmethod
+    def f_create_action(self):
+        return {
+            'view_type': 'form',
+            'view_mode': 'form',
+            'res_model': 'dlg_crm.action',
+            'view_id': self.env.ref("dlg_crm.view_dlg_crm_action_form").id,
+            'type': 'ir.actions.act_window',
+            'context': {},
+        }
+
     def f_search_update(self):
         action = self.env['dlg_crm.action'].search([('name', '=', 'ORM test')])
         print('search()', action, action.name)

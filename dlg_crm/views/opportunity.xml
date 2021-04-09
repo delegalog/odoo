@@ -43,7 +43,9 @@
                                         <field name="date_event"/>
                                         <field name="opportunity_id"/>
                                         <field name="id"/>
-                                        <button name="f_create_action" string="Crear" icon="fa-phone" type="object"/>
+                                        <button name="f_create_action" string="Crear" icon="fa-phone" type="object"
+                                        context="{'default_opportunity_id':id, 'default_customer':customer,
+                                        'default_opportunity':name}"/>
                                     </tree>
                                 </field>
                             </page>
