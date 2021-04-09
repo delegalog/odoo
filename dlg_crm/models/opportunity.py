@@ -28,7 +28,7 @@ class Opportunity(models.Model):
     priority = fields.Selection(PRIORITIES, string='Prioridad', index=True, default=PRIORITIES[0][0])
     volume_year = fields.Integer(String='€/año (estimación)')
     orders_year = fields.Integer(String='Pedidos/año (estimación)')
-    show = fields.Boolean('Mostrar')
+    show = fields.Boolean('No Mostrar')
     actions = fields.One2many('dlg_crm.action', 'opportunity_id', string='Actions', copy=True, auto_join=True)
 
     _order = 'header asc, priority desc'
