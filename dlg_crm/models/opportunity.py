@@ -61,11 +61,10 @@ class Opportunity(models.Model):
     def f_create_action_2(self):
         self.ensure_one()
         return {
-            'name': 'action',
             'view_type': 'form',
             'view_mode': 'form',
             'res_model': 'action',
-            'view_id': False,
+            'view_id': self.env.ref('action.view_id').id,
             'type': 'ir.actions.act_window',
         }
 
