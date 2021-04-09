@@ -43,6 +43,7 @@
                                         <field name="date_event"/>
                                         <field name="opportunity_id"/>
                                         <field name="id"/>
+                                        <button name="f_create_action" string="Crear" icon="fa-phone" type="object"/>
                                     </tree>
                                 </field>
                             </page>
@@ -116,7 +117,6 @@
                     <field name="phase"/>
                     <field name="priority"/>
                     <field name="date"/>
-                    <button name="f_create_action" string="Crear" class="oe_highlight" type="object"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
                 </tree>
             </field>
