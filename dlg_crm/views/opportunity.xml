@@ -7,7 +7,7 @@
                 <form string="Oportunidad">
                     <sheet>
                         <div class="oe_button_box" name="button_box">
-                            <button name="f_create_action_2" type="object"
+                            <button name="f_create_action" type="object"
                                     string="Crear Acción" icon="fa-phone"
                                     context="{'default_opportunity_id':id, 'default_customer':customer,
                                     'default_opportunity':name}"/>
@@ -110,15 +110,15 @@
             <field name="name">view.dlg.crm.opportunity.tree</field>
             <field name="model">dlg_crm.opportunity</field>
             <field name="arch" type="xml">
-                <tree string="Oportunidad" create="True">
+                <tree string="Oportunidad" create="false">
                     <field name="customer"/>
                     <field name="name"/>
                     <field name="phase"/>
                     <field name="priority"/>
                     <field name="date"/>
-                    <button name="f_create_action_2" string="Crear" class="oe_highlight" type="object"
+                    <button name="f_create_action" string="Crear" type="object"
                             context="{'default_opportunity_id':id, 'default_customer':customer,
-                                    'default_opportunity':name}" icon="fa-phone"/>
+                                    'default_opportunity':name}"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
                 </tree>
             </field>
