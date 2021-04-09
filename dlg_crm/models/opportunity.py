@@ -59,7 +59,6 @@ class Opportunity(models.Model):
 
     @staticmethod
     def f_create_action_2(self):
-        self.ensure_one()
         return {
             'view_type': 'form',
             'view_mode': 'form',
