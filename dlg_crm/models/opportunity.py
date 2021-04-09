@@ -62,7 +62,7 @@ class Opportunity(models.Model):
         return {
             'view_type': 'form',
             'view_mode': 'form',
-            'res_model': 'action',
+            'res_model': 'dlg_crm.action',
             'view_id': 'view_dlg_crm_opportunity_form',
             'type': 'ir.actions.act_window'
         }
