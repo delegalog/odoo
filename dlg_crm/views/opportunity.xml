@@ -110,14 +110,13 @@
             <field name="name">view.dlg.crm.opportunity.tree</field>
             <field name="model">dlg_crm.opportunity</field>
             <field name="arch" type="xml">
-                <tree string="Oportunidad">
+                <tree string="Oportunidad" create="Crear" context="{'default_opportunity_id':id, 'default_customer':customer,
+                                    'default_opportunity':name}">
                     <field name="customer"/>
                     <field name="name"/>
                     <field name="phase"/>
                     <field name="priority"/>
                     <field name="date"/>
-                    <create string="Crear" context="{'default_opportunity_id':id, 'default_customer':customer,
-                                    'default_opportunity':name}"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
                 </tree>
             </field>
