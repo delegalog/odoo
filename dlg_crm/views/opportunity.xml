@@ -110,8 +110,7 @@
             <field name="name">view.dlg.crm.opportunity.tree</field>
             <field name="model">dlg_crm.opportunity</field>
             <field name="arch" type="xml">
-                <tree string="Oportunidad" create="Crear" context="{'default_opportunity_id':id, 'default_customer':customer,
-                                    'default_opportunity':name}">
+                <tree string="Oportunidad" create="True">
                     <field name="customer"/>
                     <field name="name"/>
                     <field name="phase"/>
