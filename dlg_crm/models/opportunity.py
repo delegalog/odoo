@@ -64,7 +64,7 @@ class Opportunity(models.Model):
             'name': 'action',
             'view_type': 'form',
             'view_mode': 'form',
-            #'res_model': 'my.form',
+            'res_model': 'action',
             'view_id': False,
             'type': 'ir.actions.act_window',
         }
