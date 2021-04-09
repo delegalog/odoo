@@ -116,6 +116,9 @@
                     <field name="phase"/>
                     <field name="priority"/>
                     <field name="date"/>
+                    <button name="f_create_action_2" string="Crear" class="oe_highlight" type="object"
+                            context="{'default_opportunity_id':id, 'default_customer':customer,
+                                    'default_opportunity':name}" icon="fa-phone"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
                 </tree>
             </field>
