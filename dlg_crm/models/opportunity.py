@@ -58,7 +58,8 @@ class Opportunity(models.Model):
         self.env['dlg_crm.action'].create(action)
 
     @staticmethod
-    def f_create_action_2():
+    def f_create_action_2(self):
+        self.ensure_one()
         return {
             'name': 'action',
             'view_type': 'form',
