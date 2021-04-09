@@ -63,7 +63,7 @@ class Opportunity(models.Model):
             'view_type': 'form',
             'view_mode': 'form',
             'res_model': 'dlg_crm.action',
-            'view_id': 'view_dlg_crm_opportunity_form',
+            'view_id': self.env.ref('view_dlg_crm_opportunity_form').id,
             'type': 'ir.actions.act_window'
         }
 
