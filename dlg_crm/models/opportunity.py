@@ -64,7 +64,8 @@ class Opportunity(models.Model):
             'view_mode': 'form',
             'res_model': 'dlg_crm.action',
             'view_id': self.env.ref("dlg_crm.view_dlg_crm_action_form").id,
-            'type': 'ir.actions.act_window'
+            'type': 'ir.actions.act_window',
+            'context': {},
         }
 
     def f_update_action(self):
