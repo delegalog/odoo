@@ -139,6 +139,8 @@
                     </group>
                     <filter name="filter_by_done" string="Finalizada" domain="[('done','=','True')]"
                             help="Acciones finalizadas"/>
+                    <filter name="filter_by_opportunity" string="Oportunidad"
+                            help="Oportunidades"/>
                 </search>
             </field>
         </record>
