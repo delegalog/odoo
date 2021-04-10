@@ -3,38 +3,10 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="/dlg219_crm/views/views.xml">
-          <value>
-            <Attribute>
-              <option name="separator" value=":" />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/dlg_crm/models/phase.py">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="/dlg_crm/views/action.xml">
           <value>
             <Attribute>
               <option name="separator" value=":" />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/dlg_crm/views/opportunity.xml">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="/dlg_crm/views/phase.xml">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>

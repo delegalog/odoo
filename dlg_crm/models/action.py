@@ -21,6 +21,10 @@ class Action(models.Model):
                              ('D', 'Comida'), ('E', 'email')], string='Tipo', required=False)
     done = fields.Boolean(string='Finalizada')
     image = fields.Binary(string='Imagen')
+    phase = fields.Many2one('dlg_crm.phase', string="Fase", required=False)
+    file = fields.Binary("Attachment")
+    file_name = fields.Char("File Name")
+    url_field = fields.Char("Archivo")
 
     color = fields.Integer()
 
