@@ -43,32 +43,16 @@
             </field>
         </record>
 
+
+        ['field_1','field_2']
+
         <record id="view_dlg_crm_action_kanban" model="ir.ui.view">
             <field name="name">view.dlg.crm.action.kanban</field>
             <field name="model">dlg_crm.action</field>
             <field name="arch" type="xml">
-                <kanban default_group_by="opportunity"
-                        on_create="quick_create"
-                        quick_create_view="view_dlg_crm_action_form" archivable="false" sample="1">
-                    <field name="color"/>
-                    <templates>
-                        <div t-name="kanban-box">
-                            <div t-name="kanban-box">
-                                    <div t-attf-class="#{!selection_mode ? kanban_color(record.color.raw_value) : ''} oe_kanban_global_click">
-                                    <div class="o_dropdown_kanban dropdown">
-                                        <a class="dropdown-toggle o-no-caret btn" role="button" data-toggle="dropdown" data-display="static" href="#" aria-label="Dropdown menu" title="Dropdown menu">
-                                            <span class="fa fa-ellipsis-v"/>
-                                        </a>
-                                        <div class="dropdown-menu" role="menu">
-                                            <t t-if="widget.editable"><a role="menuitem" type="edit" class="dropdown-item">Edit</a></t>
-                                        </div>
-                                    </div>
-                                    <div class="oe_kanban_content">
-                                        <strong class="o_kanban_record_title">
-                                            <field name="opportunity"/>
-                                        </strong>
 
-                            <kanban default_group_by="phase"
+
+                            <kanban default_group_by="opportunity+phase"
                                 on_create="quick_create"
                                 quick_create_view="view_dlg_crm_action_form" archivable="false" sample="1">
                                 <field name="color"/>
@@ -115,10 +99,6 @@
                                 </templates>
                             </kanban>
 
-                            </div></div></div>
-                        </div>
-                    </templates>
-                </kanban>
             </field>
         </record>
 
