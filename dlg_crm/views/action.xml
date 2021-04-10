@@ -50,11 +50,14 @@
                 <kanban default_group_by="opportunity"
                         on_create="quick_create"
                         quick_create_view="view_dlg_crm_action_form" archivable="false" sample="1">
-                <kanban default_group_by="phase"
-                        on_create="quick_create"
-                        quick_create_view="view_dlg_crm_action_form" archivable="false" sample="1">
                     <field name="color"/>
                     <templates>
+                        <div t-name="kanban-box">
+                        <kanban default_group_by="phase"
+                            on_create="quick_create"
+                            quick_create_view="view_dlg_crm_action_form" archivable="false" sample="1">
+                        <field name="color"/>
+                        <templates>
                         <div t-name="kanban-box">
                             <div t-attf-class="#{!selection_mode ? kanban_color(record.color.raw_value) : ''} oe_kanban_global_click">
                                 <div class="o_dropdown_kanban dropdown">
@@ -93,9 +96,11 @@
                                     </div>
                                 </div>
                             </div>
+                            </div>
+                        </templates>
+                        </kanban>
                         </div>
                     </templates>
-                </kanban>
                 </kanban>
             </field>
         </record>
