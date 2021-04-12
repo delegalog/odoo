@@ -9,12 +9,16 @@ class ProjectController(http.Controller):
     @http.route('/api/project', auth='public', method=['GET'], csrf=False)
     def get_task(self, **kw):
         try:
-            project = http.request.env['dlg_projects.project'].sudo().search_read([], ['id', 'name',
+            project = http.request.env['dlg_projects.project'].sudo().search_read([], ['id',
+                                                                                       'name',
                                                                                        'notes',
-                                                                                       'phase', 'done', 'header',
+                                                                                       'phase',
+                                                                                       'done',
+                                                                                       'header',
                                                                                        'priority',
                                                                                        'show',
-                                                                                       'actions', 'user'])
+                                                                                       'actions',
+                                                                                       'user'])
             res = json.dumps(project, ensure_ascii=False).encode('utf-8')
             return Response(res, content_type='application/json;charset=utf-8', status=200)
         except Exception as e:
