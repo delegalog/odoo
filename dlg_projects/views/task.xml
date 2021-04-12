@@ -139,9 +139,9 @@
             </field>
         </record>
 
-        <record id="action_dlg_projects_task_view" model="ir.tasks.act_window">
+        <record id="action_dlg_projects_task_view" model="ir.actions.act_window">
             <field name="name">Tareas</field>
-            <field name="type">ir.task.act_window</field>
+            <field name="type">ir.actions.act_window</field>
             <field name="res_model">dlg_projects.task</field>
             <field name="view_mode">kanban,tree,form</field>
             <field name="help" type="html">
