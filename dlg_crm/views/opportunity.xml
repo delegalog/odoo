@@ -10,7 +10,7 @@
                             <button name="f_create_action" type="object"
                                     string="Crear Acción" icon="fa-phone"
                                     context="{'default_opportunity_id':id, 'default_customer':customer,
-                                    'default_opportunity':name, 'default_phase':phase, 'default_date':current_date}"/>
+                                    'default_user':user, 'default_opportunity':name, 'default_phase':phase, 'default_date':current_date}"/>
                             <button name="toggle_state" type="object" class="oe_stat_button"
                                     string="Oportunidad realizada" icon="fa-play-circle"/>
                         </div>
@@ -30,6 +30,7 @@
                                 <field name="id"/>
                                 <field name="header"/>
                                 <field name="show"/>
+                                <field name="user"/>
                             </group>
                         </group>
                         <group name="group_bottom">
@@ -86,16 +87,8 @@
                                         </div>
                                         <div class="oe_kanban_bottom_right">
                                             <table>
-                                                <tr>
-                                                    <td>
-                                                        <div><field name="orders_year"/> pedidos/año</div>
-                                                    </td>
-                                                 </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div><field name="volume_year" widget="monetary"/> €/año</div>
-                                                    </td>
-                                                </tr>
+                                                <tr><td><div><field name="orders_year"/> pedidos/año</div></td></tr>
+                                                <tr><td><div><field name="volume_year" widget="monetary"/> €/año</div></td></tr>
                                             </table>
                                         </div>
                                     </div>
