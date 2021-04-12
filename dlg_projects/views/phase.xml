@@ -85,7 +85,7 @@
                 </p>
             </field>
         </record>
-        <menuitem id="menu_dlg_projects_root" name="dlg219 projects" sequence="10"/>
+        <menuitem id="menu_dlg_projects_root" name="dlg219 Projects" sequence="10"/>
         <menuitem id="menu_dlg_projects_phase" name="Fases" parent="menu_dlg_projects_root" action="action_dlg_projects_phase_view" sequence="2"/>
     </data>
 </odoo>
