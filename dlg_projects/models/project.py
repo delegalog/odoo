@@ -25,7 +25,7 @@ class Project(models.Model):
     header = fields.Char('Cabecera')
     priority = fields.Selection(PRIORITIES, string='Prioridad', index=True, default=PRIORITIES[0][0])
     show = fields.Boolean('No Mostrar')
-    tasks = fields.One2many('dlg_projects.task', 'proyect_id', string='Tareas', copy=True, auto_join=True)
+    tasks = fields.One2many('dlg_projects.task', 'project_id', string='Tareas', copy=True, auto_join=True)
     user = fields.Char("Usuario", default=lambda self: self.env.user.name)
     #user = fields.Many2one('res.users', 'Current User', default=lambda self: self.env.user)
 
