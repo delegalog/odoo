@@ -9,8 +9,8 @@
                         <div class="oe_button_box" name="button_box">
                             <button name="f_create_task" type="object"
                                     string="Crear Tarea" icon="fa-phone"
-                                    context="{'default_project_id':id,
-                                    'default_user':user, 'default_project':name, 'default_phase':phase, 'default_date':current_date}"/>
+                                    context="{'default_user':user, 'default_project_id':id,
+                                     'default_project':name, 'default_phase':phase, 'default_date':current_date}"/>
                             <button name="toggle_state" type="object" class="oe_stat_button"
                                     string="Proyecto realizada" icon="fa-play-circle"/>
                         </div>

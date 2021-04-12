@@ -5,7 +5,7 @@ import datetime
 
 
 class Task(models.Model):
-    _name = 'dlg_projects.action'
+    _name = 'dlg_projects.task'
     _description = 'Acciones'
 
     project = fields.Text(string='Proyecto', readonly=True)
