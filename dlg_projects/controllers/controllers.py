@@ -47,7 +47,7 @@ class TaskController(http.Controller):
                                                                                  'date_end',
                                                                                  'type',
                                                                                  'done',
-                                                                                 'project_id',
+                                                                                 'projectid',
                                                                                  'phase',
                                                                                  'file',
                                                                                  'file_name',
