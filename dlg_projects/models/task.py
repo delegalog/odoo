@@ -9,7 +9,7 @@ class Task(models.Model):
     _description = 'Acciones'
 
     project = fields.Text(string='Proyecto', readonly=True)
-    projectid = fields.Integer(string="ID proyecto", readonly=True)
+    project_id = fields.Integer(string="ID proyecto", readonly=True)
     id = fields.Integer()
     name = fields.Char(string='Descripción')
     notes = fields.Text(string='Notas')
