@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from . import opportunity
+from . import project
 from . import phase
-from . import action
+from . import task
 

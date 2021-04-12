@@ -9,8 +9,6 @@ class Phase(models.Model):
 
     id = fields.Integer(string='ID')
     name = fields.Char(string='Nombre')
-    total_volume = fields.Integer(string='Total €/año')
-    total_orders = fields.Integer(string='Total pedidos/año')
 
     # ORM
     def f_create(self):
@@ -42,7 +40,7 @@ class PhaseReport(models.AbstractModel):
 
     @api.model
     def _get_report_values(self, docids, data=None):
-        report_obj = self.env['ir.actions.report']
+        report_obj = self.env['ir.phase.report']
         report = report_obj._get_report_from_name('dlg_crm.report_phase_card')
         return {
             'doc_ids': docids,

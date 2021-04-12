@@ -1,14 +1,11 @@
 <odoo>
     <data>
-        <template id="report_opportunity_card">
+        <template id="report_project_card">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">
                     <t t-call="web.external_layout">
                         <div class="page">
-                            <h2>Oportunidad</h2>
-                            <p>Cliente:
-                                <span t-field="o.customer.name"/>
-                            </p>
+                            <h2>Proyecto</h2>
                             <p>Descripción:
                                 <span t-field="o.name"/>
                             </p>

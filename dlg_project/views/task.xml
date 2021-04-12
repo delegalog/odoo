@@ -1,22 +1,21 @@
 <odoo>
     <data>
-        <record id="view_dlg_crm_action_form" model="ir.ui.view">
-            <field name="name">view.dlg.crm.action.form</field>
-            <field name="model">dlg_crm.action</field>
+        <record id="view_dlg_crm_task_form" model="ir.ui.view">
+            <field name="name">view.dlg.crm.task.form</field>
+            <field name="model">dlg_crm.task</field>
             <field name="arch" type="xml">
-                <form string="Acción">
+                <form string="Tarea">
                     <sheet>
                         <div class="oe_button_box" name="button_box">
                             <button name="toggle_state" type="object" class="oe_stat_button"
-                                    string="Acción finalizada" icon="fa-play-circle"
+                                    string="Tarea finalizada" icon="fa-play-circle"
                             />
                         </div>
                         <group name="group_top">
                             <group name="group_left">
-                                <field name="customer"/>
-                                <field name="opportunity"/>
+                                <field name="proyect"/>
                                 <field name="date"/>
-                                <field name="date_event"/>
+                                <field name="date"/>
                                 <field name="date_end"/>
                                 <field name="type"/>
                                 <field name="phase"/>
@@ -44,13 +43,13 @@
             </field>
         </record>
 
-        <record id="view_dlg_crm_action_kanban" model="ir.ui.view">
-            <field name="name">view.dlg.crm.action.kanban</field>
-            <field name="model">dlg_crm.action</field>
+        <record id="view_dlg_crm_task_kanban" model="ir.ui.view">
+            <field name="name">view.dlg.crm.task.kanban</field>
+            <field name="model">dlg_crm.task</field>
             <field name="arch" type="xml">
                 <kanban default_group_by="phase"
                         on_create="quick_create"
-                        quick_create_view="view_dlg_crm_action_form" archivable="false" sample="1">
+                        quick_create_view="view_dlg_crm_task_form" archivable="false" sample="1">
                     <field name="color"/>
                     <templates>
                         <div t-name="kanban-box">
@@ -81,7 +80,7 @@
                                         <div class="oe_kanban_bottom_right">
                                             <table>
                                                 <tr><td>Tipo: <field name="type"/></td></tr>
-                                                <tr><td>Evento: <field name="date_event"/></td></tr>
+                                                <tr><td>Inicio: <field name="date"/></td></tr>
                                                 <tr><td>Fin: <field name="date_end"/></td></tr>
                                             </table>
                                         </div>
@@ -94,17 +93,15 @@
             </field>
         </record>
 
-        <record id="view_dlg_crm_action_tree" model="ir.ui.view">
-            <field name="name">view.dlg.crm.action.tree</field>
-            <field name="model">dlg_crm.action</field>
+        <record id="view_dlg_crm_task_tree" model="ir.ui.view">
+            <field name="name">view.dlg.crm.task.tree</field>
+            <field name="model">dlg_crm.task</field>
             <field name="arch" type="xml">
-                <tree string="Acción">
+                <tree string="Tarea">
                     <field name="id"/>
-                    <field name="customer"/>
-                    <field name="opportunity"/>
+                    <field name="project"/>
                     <field name="phase"/>
                     <field name="date"/>
-                    <field name="date_event"/>
                     <field name="date_end"/>
                     <field name="name"/>
                     <field name="type"/>
@@ -112,15 +109,14 @@
             </field>
         </record>
 
-        <record id="view_dlg_crm_action_search" model="ir.ui.view">
-            <field name="name">view.dlg.crm.action.search</field>
-            <field name="model">dlg_crm.action</field>
+        <record id="view_dlg_crm_task_search" model="ir.ui.view">
+            <field name="name">view.dlg.crm.task.search</field>
+            <field name="model">dlg_crm.task</field>
             <field name="arch" type="xml">
-                <search string="Filtrar oportunidades">
+                <search string="Filtrar proyectos">
                     <field name="customer"/>
-                    <field name="opportunity"/>
+                    <field name="project"/>
                     <field name="date"/>
-                    <field name="date_event"/>
                     <field name="date_end"/>
                     <field name="name"/>
                     <field name="phase"/>
@@ -130,34 +126,34 @@
                                 help="Agrupar por fase"/>
                         <filter name="groupby_type" string="Tipo" domain="[]" context="{'group_by':'type'}"
                                 help="Agrupar por tipo"/>
-                        <filter name="groupby_opportunity" string="Oportunidad" domain="[]" context="{'group_by':'opportunity'}"
-                                help="Agrupar por oportunidad"/>
-                        <filter name="groupby_date" string="Fecha" context="{'group_by':'date:year'}"
-                                help="Agrupar por fecha"/>
+                        <filter name="groupby_project" string="Proyecto" domain="[]" context="{'group_by':'project'}"
+                                help="Agrupar por proyecto"/>
+                        <filter name="groupby_date_end" string="Fecha" context="{'group_by':'date_end:year'}"
+                                help="Agrupar por fecha fin"/>
                     </group>
                     <filter name="filter_by_done" string="Finalizada" domain="[('done','=','True')]"
                             help="Acciones finalizadas"/>
-                    <filter name="filter_by_opportunity" string="Oportunidad"
-                            help="Oportunidades"/>
+                    <filter name="filter_by_project" string="Proyecto"
+                            help="Proyectos"/>
                 </search>
             </field>
         </record>
 
-        <record id="action_dlg_crm_action_view" model="ir.actions.act_window">
-            <field name="name">Acciones</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">dlg_crm.action</field>
+        <record id="action_dlg_crm_task_view" model="ir.tasks.act_window">
+            <field name="name">Tareas</field>
+            <field name="type">ir.task.act_window</field>
+            <field name="res_model">dlg_crm.task</field>
             <field name="view_mode">kanban,tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
-                    Acción
+                    Tarea
                 </p>
                 <p>
-                    Click 'Nueva' para añadir nuevas acciones
+                    Click 'Nueva' para añadir nuevas tareas
                 </p>
             </field>
         </record>
 
-        <menuitem id="menu_dlg_crm_action" name="Acciones" parent="menu_dlg_crm_root" action="action_dlg_crm_action_view" sequence="1"/>
+        <menuitem id="menu_dlg_crm_task" name="Tareas" parent="menu_dlg_crm_root" action="action_dlg_crm_task_view" sequence="1"/>
     </data>
  </odoo>

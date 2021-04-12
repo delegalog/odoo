@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+        <report
+            string="Informe proyecto"
+            id="dlg_crm_project_report"
+            model="dlg_crm.project"
+            report_type="qweb-pdf"
+            name="dlg_crm.report_project_card"
+            file="dlg_crm.report_project_card"
+            attachment_use="True"
+        />
+    </data>
+</odoo>
