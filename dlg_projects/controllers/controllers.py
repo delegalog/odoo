@@ -39,18 +39,18 @@ class TaskController(http.Controller):
     def get_phase(self, **kw):
         try:
             task = http.request.env['dlg_projects.task'].sudo().search_read([], ['project',
-                                                                                   'id',
-                                                                                   'name',
-                                                                                   'notes',
-                                                                                   'date',
-                                                                                   'date_end',
-                                                                                   'type',
-                                                                                   'done',
-                                                                                   'project_id',
-                                                                                   'phase',
-                                                                                   'file',
-                                                                                   'file_name',
-                                                                                   'color', 'user'])
+                                                                                 'id',
+                                                                                 'name',
+                                                                                 'notes',
+                                                                                 'date',
+                                                                                 'date_end',
+                                                                                 'type',
+                                                                                 'done',
+                                                                                 'project_id',
+                                                                                 'phase',
+                                                                                 'file',
+                                                                                 'file_name',
+                                                                                 'color', 'user'])
             res = json.dumps(task, ensure_ascii=False).encode('utf-8')
             return Response(res, content_type='application/json;charset=utf-8', status=200)
         except Exception as e:

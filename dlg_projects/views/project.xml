@@ -4,7 +4,7 @@
             <field name="name">view.dlg.projects.project.form</field>
             <field name="model">dlg_projects.project</field>
             <field name="arch" type="xml">
-                <form string="Proyecto">
+                <form string="Proyectos">
                     <sheet>
                         <div class="oe_button_box" name="button_box">
                             <button name="f_create_task" type="object"
@@ -12,7 +12,7 @@
                                     context="{'default_project_id':id,
                                     'default_user':user, 'default_project':name, 'default_phase':phase, 'default_date':current_date}"/>
                             <button name="toggle_state" type="object" class="oe_stat_button"
-                                    string="Proyecto realizado" icon="fa-play-circle"/>
+                                    string="Proyecto realizada" icon="fa-play-circle"/>
                         </div>
                         <group name="group_top">
                             <group name="group_left">
@@ -34,7 +34,7 @@
                         </group>
                         <notebook>
                             <page string="Tareas" name="tasks">
-                                <field name="tasks" mode="tree" default_order="date_end" delete="true">
+                                <field name="tasks" mode="tree" default_order="date_event" delete="true">
                                     <tree string="Tarea" create="false">
                                         <field name="id"/>
                                         <field name="name"/>
