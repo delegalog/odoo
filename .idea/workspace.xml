@@ -6,17 +6,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cee65ad8-7cfb-4a9d-95d0-64930dd53c67" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dlg_project/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_project/__manifest__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlg_project/controllers/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_project/controllers/controllers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlg_project/models/phase.py" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_project/models/phase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlg_project/models/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_project/models/project.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlg_project/models/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_project/models/task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlg_project/reports/phase.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_project/reports/phase.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlg_project/reports/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_project/reports/project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlg_project/reports/task.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_project/reports/task.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlg_project/views/phase.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_project/views/phase.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlg_project/views/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_project/views/project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dlg_project/views/task.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dlg_project/views/task.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/__manifest__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/controllers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/controllers/controllers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/demo/demo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/models/phase.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/models/project.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/models/task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/reports/phase.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/reports/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/reports/task.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/security/ir.model.access.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/static/description/img/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/views/phase.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/views/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/views/task.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dlg_project/views/templates.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +76,11 @@
           <url>file://$PROJECT_DIR$/odoo_multi_channel_sale/models/base/__init__.py</url>
           <line>7</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/dlg_projects/models/__init__.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
