@@ -123,9 +123,9 @@
             </field>
         </record>
 
-        <record id="action_dlg_projects_project_view" model="ir.project.act_window">
+        <record id="action_dlg_projects_project_view" model="ir.actions.act_window">
             <field name="name">Proyectos</field>
-            <field name="type">ir.project.act_window</field>
+            <field name="type">ir.actions.act_window</field>
             <field name="res_model">dlg_projects.project</field>
             <field name="view_mode">kanban,tree,form</field>
             <field name="help" type="html">
