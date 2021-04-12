@@ -55,7 +55,7 @@ class Project(models.Model):
             'view_mode': 'form',
             'res_model': 'dlg_projects.task',
             'view_id': self.env.ref("dlg_projects.view_dlg_projects_task_form").id,
-            'type': 'ir.tasks.act_window',
+            'type': 'ir.actions.act_window',
             'context': {},
         }
 
