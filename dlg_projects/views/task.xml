@@ -67,19 +67,17 @@
                                         <field name="name"/>
                                     </strong>
                                     <strong class="o_kanban_record_subtitle">
-                                        <field name="customer"/>
+                                        <field name="type"/>
                                     </strong>
 
                                     <div class="o_kanban_record_bottom">
                                         <div class="oe_kanban_bottom_left">
                                             <table>
-                                                <tr><td>Inicio: <field name="date"/></td></tr>
                                                 <tr><td>Lista: <field name="done"/></td></tr>
                                             </table>
                                         </div>
                                         <div class="oe_kanban_bottom_right">
                                             <table>
-                                                <tr><td>Tipo: <field name="type"/></td></tr>
                                                 <tr><td>Inicio: <field name="date"/></td></tr>
                                                 <tr><td>Fin: <field name="date_end"/></td></tr>
                                             </table>
@@ -114,7 +112,6 @@
             <field name="model">dlg_projects.task</field>
             <field name="arch" type="xml">
                 <search string="Filtrar proyectos">
-                    <field name="customer"/>
                     <field name="project"/>
                     <field name="date"/>
                     <field name="date_end"/>
