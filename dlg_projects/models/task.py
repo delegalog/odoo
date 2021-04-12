@@ -6,7 +6,7 @@ import datetime
 
 class Task(models.Model):
     _name = 'dlg_projects.task'
-    _description = 'Acciones'
+    _description = 'Tareas'
 
     project = fields.Text(string='Proyecto', readonly=True)
     project_id = fields.Integer(string="ID proyecto", readonly=True)
@@ -33,18 +33,18 @@ class Task(models.Model):
 
     # ORM
     @staticmethod
-    def f_create_action(self):
+    def f_create_task(self):
         return {
             'view_type': 'form',
             'view_mode': 'form',
-            'res_model': 'dlg_projects.action',
-            'view_id': self.env.ref("dlg_projects.view_dlg_projects_action_form").id,
+            'res_model': 'dlg_projects.task',
+            'view_id': self.env.ref("dlg_projects.view_dlg_projects_task_form").id,
             'type': 'ir.actions.act_window',
             'context': {},
         }
 
     def f_search_update(self):
-        task = self.env['dlg_projects.action'].search([('name', '=', 'ORM test')])
+        task = self.env['dlg_projects.task'].search([('name', '=', 'ORM test')])
         print('search()', task, task.name)
 
         task_b = self.env['dlg_projects.task'].browse([8])
@@ -59,7 +59,7 @@ class Task(models.Model):
         task.unlink()
 
 
-class ActionReport(models.AbstractModel):
+class TaskReport(models.AbstractModel):
     _name = 'report.dlg_projects.report_task_card'
 
     @api.model

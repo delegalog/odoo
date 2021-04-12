@@ -17,7 +17,7 @@ class ProjectController(http.Controller):
                                                                                        'header',
                                                                                        'priority',
                                                                                        'show',
-                                                                                       'actions',
+                                                                                       'tasks',
                                                                                        'user'])
             res = json.dumps(project, ensure_ascii=False).encode('utf-8')
             return Response(res, content_type='application/json;charset=utf-8', status=200)
