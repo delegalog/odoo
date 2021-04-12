@@ -1,8 +1,8 @@
 <odoo>
     <data>
-        <record id="view_dlg_crm_project_form" model="ir.ui.view">
-            <field name="name">view.dlg.crm.project.form</field>
-            <field name="model">dlg_crm.project</field>
+        <record id="view_dlg_projects_project_form" model="ir.ui.view">
+            <field name="name">view.dlg.projects.project.form</field>
+            <field name="model">dlg_projects.project</field>
             <field name="arch" type="xml">
                 <form string="Proyecto">
                     <sheet>
@@ -50,13 +50,13 @@
             </field>
         </record>
 
-        <record id="view_dlg_crm_project_kanban" model="ir.ui.view">
-            <field name="name">view.dlg.crm.project.kanban</field>
-            <field name="model">dlg_crm.project</field>
+        <record id="view_dlg_projects_project_kanban" model="ir.ui.view">
+            <field name="name">view.dlg.projects.project.kanban</field>
+            <field name="model">dlg_projects.project</field>
             <field name="arch" type="xml">
                 <kanban default_group_by="phase"
                         on_create="quick_create"
-                        quick_create_view="view_dlg_crm_project_form" archivable="false" sample="1">
+                        quick_create_view="view_dlg_projects_project_form" archivable="false" sample="1">
                     <field name="color"/>
                     <templates>
                         <div t-name="kanban-box">
@@ -87,9 +87,9 @@
             </field>
         </record>
 
-        <record id="view_dlg_crm_project_tree" model="ir.ui.view">
-            <field name="name">view.dlg.crm.project.tree</field>
-            <field name="model">dlg_crm.project</field>
+        <record id="view_dlg_projects_project_tree" model="ir.ui.view">
+            <field name="name">view.dlg.projects.project.tree</field>
+            <field name="model">dlg_projects.project</field>
             <field name="arch" type="xml">
                 <tree string="Proyecto">
                     <field name="name"/>
@@ -101,9 +101,9 @@
             </field>
         </record>
 
-        <record id="view_dlg_crm_project_search" model="ir.ui.view">
-            <field name="name">view.dlg.crm.project.search</field>
-            <field name="model">dlg_crm.project</field>
+        <record id="view_dlg_projects_project_search" model="ir.ui.view">
+            <field name="name">view.dlg.projects.project.search</field>
+            <field name="model">dlg_projects.project</field>
             <field name="arch" type="xml">
                 <search string="Filtrar proyectos">
                     <field name="name"/>
@@ -123,10 +123,10 @@
             </field>
         </record>
 
-        <record id="action_dlg_crm_project_view" model="ir.project.act_window">
+        <record id="action_dlg_projects_project_view" model="ir.project.act_window">
             <field name="name">Proyectos</field>
             <field name="type">ir.project.act_window</field>
-            <field name="res_model">dlg_crm.project</field>
+            <field name="res_model">dlg_projects.project</field>
             <field name="view_mode">kanban,tree,form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
@@ -138,6 +138,6 @@
             </field>
         </record>
 
-        <menuitem id="menu_dlg_crm_project" name="Proyectos" parent="menu_dlg_crm_root" action="action_dlg_crm_project_view" sequence="0"/>
+        <menuitem id="menu_dlg_projects_project" name="Proyectos" parent="menu_dlg_projects_root" action="action_dlg_projects_project_view" sequence="0"/>
     </data>
  </odoo>

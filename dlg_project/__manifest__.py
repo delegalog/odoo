@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "dlg_project",
+    'name': "dlg_projects",
 
     'summary': """
         Módulo PROYECTOS para la gestión de proyectos y tareas""",

@@ -2,11 +2,11 @@
     <data>
         <report
             string="Informe tarea"
-            id="dlg_crm_tarea_report"
-            model="dlg_crm.tarea"
+            id="dlg_projects_tarea_report"
+            model="dlg_projects.tarea"
             report_type="qweb-pdf"
-            name="dlg_crm.report_tarea_card"
-            file="dlg_crm.report_tarea_card"
+            name="dlg_projects.report_tarea_card"
+            file="dlg_projects.report_tarea_card"
             attachment_use="True"
         />
     </data>
