@@ -9,7 +9,7 @@ class ProjectController(http.Controller):
     @http.route('/api/project', auth='public', method=['GET'], csrf=False)
     def get_task(self, **kw):
         try:
-            project = http.request.env['dlg_crm.project'].sudo().search_read([], ['id', 'name',
+            project = http.request.env['dlg_projects.project'].sudo().search_read([], ['id', 'name',
                                                                                'notes',
                                                                                'phase', 'done', 'header',
                                                                                'priority',
@@ -26,7 +26,7 @@ class PhaseController(http.Controller):
     @http.route('/api/phase', auth='public', method=['GET'], csrf=False)
     def get_phase(self, **kw):
         try:
-            phase = http.request.env['dlg_crm.phase'].sudo().search_read([], ['id', 'name'])
+            phase = http.request.env['dlg_projects.phase'].sudo().search_read([], ['id', 'name'])
             res = json.dumps(phase, ensure_ascii=False).encode('utf-8')
             return Response(res, content_type='application/json;charset=utf-8', status=200)
         except Exception as e:
@@ -38,7 +38,7 @@ class TaskController(http.Controller):
     @http.route('/api/task', auth='public', method=['GET'], csrf=False)
     def get_phase(self, **kw):
         try:
-            action = http.request.env['dlg_crm.task'].sudo().search_read([], ['project',
+            action = http.request.env['dlg_projects.task'].sudo().search_read([], ['project',
                                                                                 'id',
                                                                                 'name',
                                                                                 'notes',

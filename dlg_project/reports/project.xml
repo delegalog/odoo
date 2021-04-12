@@ -2,11 +2,11 @@
     <data>
         <report
             string="Informe proyecto"
-            id="dlg_crm_project_report"
-            model="dlg_crm.project"
+            id="dlg_projects_project_report"
+            model="dlg_projects.project"
             report_type="qweb-pdf"
-            name="dlg_crm.report_project_card"
-            file="dlg_crm.report_project_card"
+            name="dlg_projects.report_project_card"
+            file="dlg_projects.report_project_card"
             attachment_use="True"
         />
     </data>
