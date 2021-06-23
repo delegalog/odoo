@@ -1286,7 +1286,7 @@ class SaleShop(models.Model):
 							data = self.with_context(self.env.context.copy()).create_presta_product(
 								product_data.get('product'), prestashop)
 							if data:
-								self = self.with_context(log_id=int(data))
+								self = self.with_context(log_id=data)
 
 		shop.write({'last_prestashop_product_import_date': datetime.now()})
 		self.env.cr.commit()
