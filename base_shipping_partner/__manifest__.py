@@ -5,12 +5,13 @@
     'summary': '',
     'category': 'Sales',
 
-    'depends': ['delivery','product'],
-    'data':[
-            'views/stock_picking_view.xml',
-            'views/shipping_partner_view.xml',
-            'views/delivery_carrier_view.xml',
-            'security/ir.model.access.csv',
+    'depends': ['delivery', 'product'],
+    'data': [
+        'views/stock_picking_view.xml',
+        'views/shipping_partner_view.xml',
+        'views/delivery_carrier_view.xml',
+        'views/shipping_api_log_view.xml',
+        'security/ir.model.access.csv',
     ],
 
     'images': ['static/description/base_shipping.png'],

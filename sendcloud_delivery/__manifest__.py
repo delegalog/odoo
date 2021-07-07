@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'SendCloud Odoo Shipping Integration',
+    'name': 'SendCloud Odoo Shipping Connector',
     'version': '14.0',
     'category': 'Warehouse',
     'summary': 'Integrate & Manage your SendCloud Shipping Operations from Odoo',

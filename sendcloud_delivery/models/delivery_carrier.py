@@ -138,7 +138,7 @@ class DeliveryCarrier(models.Model):
             is_outside_eu_shipment = False
             if picking.partner_id.country_id.id not in europe_country_group.country_ids.ids:
                 is_outside_eu_shipment = True
-            total_bulk_weight = picking.weight_bulk
+            total_bulk_weight = round(picking.weight_bulk,3)
             try:
                 package_list = []
                 if picking.package_ids:

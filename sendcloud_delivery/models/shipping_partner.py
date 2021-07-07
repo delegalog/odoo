@@ -32,7 +32,11 @@ class ShippingPartner(models.Model):
                                    data=data)
             if req.status_code != 410:
                 req.raise_for_status()
-            response = json.loads(req.content)
+            if isinstance(req.content, bytes):
+                req = req.content.decode("utf-8")
+                response = json.loads(req)
+            else:
+                response = json.loads(req.content)
         except requests.HTTPError as e:
             response = json.loads(req.text)
             error_msg = ''
