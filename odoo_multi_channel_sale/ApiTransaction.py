@@ -71,7 +71,7 @@ class Transaction:
 							)._create_feeds(data_list)
 						elif object == 'product.attribute':
 							data_list = data_list.get('create_ids', []) if data_list.get('create_ids') else data_list.get('update_ids', [])
-							msg = "<div class='alert alert-success' role='alert'><h3 class='alert-heading'><i class='fa fa-smile-o'/>  Congratulations !</h3><hr><span class='badge badge-pill badge-success'>Success</span>All attributes are synced along with the <span class='font-weight-bold'> {} attribute sets</span></div>".format(len(data_list)) if data_list else "<div class='alert alert-danger' role='alert'>Attributes are failed to import.</div>"
+							msg = data_list[-1].get('store_id') + "<div class='alert alert-success' role='alert'><h3 class='alert-heading'><i class='fa fa-smile-o'/>  Congratulations !</h3><hr><span class='badge badge-pill badge-success'>Success</span>All attributes are synced along with the <span class='font-weight-bold'> {} attribute sets</span></div>".format(len(data_list)) if data_list else "<div class='alert alert-danger' role='alert'>Attributes are failed to import.</div>"
 						else:
 							raise Exception('Invalid object type')
 					else:
