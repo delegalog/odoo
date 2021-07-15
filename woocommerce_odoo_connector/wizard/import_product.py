@@ -57,8 +57,7 @@ class ImportWoocommerceProducts(models.TransientModel):
             'products',
             params={
                 'page': kwargs.get('page'),
-                'per_page': kwargs.get('page_size'),
-                'order': 'asc'
+                'per_page': kwargs.get('page_size')
             }
         ).json()
         if "message" in products:
