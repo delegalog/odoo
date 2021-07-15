@@ -52,9 +52,11 @@ class ImportWoocommerceProducts(models.TransientModel):
     def _get_product_all(self, woocommerce, channel, **kwargs):
         products = woocommerce.get(
             'products',
-            page=kwargs.get('page'),
-            per_page=kwargs.get('page_size'),
-            order='asc'
+            params={
+                'page': kwargs.get('page'),
+                'per_page': kwargs.get('page_size'),
+                'order': 'asc'
+            }
         ).json()
 
         print(products)
