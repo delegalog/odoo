@@ -51,7 +51,7 @@ class ImportWoocommerceProducts(models.TransientModel):
 
     def _get_product_all(self, woocommerce, channel, **kwargs):
         products = woocommerce.get(
-            "products?page=kwargs.get('page')"
+            'products'
         ).json()
         if "message" in products:
             message = "Error in getting products : {}".format(products["message"])
