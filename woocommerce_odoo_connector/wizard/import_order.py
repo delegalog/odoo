@@ -86,6 +86,10 @@ class ImportWoocommerceOrders(models.TransientModel):
                 'order': 'asc'
             }
         ).json()
+
+        #url = 'orders?page={}&per_page={}&order=asc'.format(kwargs.get("page"), kwargs.get("page_size"))
+        #orders = woocommerce.get(url).json()
+
         if "message" in orders:
             raise UserError(f'Error in Getting Orders : {orders["message"]}')
         return list(map(lambda x: self._process_order(woocommerce, channel, x), orders))
@@ -101,6 +105,10 @@ class ImportWoocommerceOrders(models.TransientModel):
                 'order': 'asc' if kwargs.get("from_cron") else "desc"
             }
         ).json()
+
+        #import_order_date = kwargs.get("woocommerce_import_date_from").isoformat()
+        #url = 'orders?after={}&page={}&per_page={}&order=asc'.format(import_order_date, kwargs.get("page"), kwargs.get("page_size"))
+        #orders = woocommerce.get(url).json()
         try:
             vals_list = list(map(lambda x: self._process_order(woocommerce, channel, x), orders))
             if kwargs.get("from_cron"):
