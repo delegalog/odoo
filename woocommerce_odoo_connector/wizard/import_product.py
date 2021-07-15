@@ -49,6 +49,9 @@ class ImportWoocommerceProducts(models.TransientModel):
         return str_ids
 
     def _get_product_all(self, woocommerce, channel, **kwargs):
+        _logger.info("page: " + kwargs.get('page'))
+        _logger.info("page_size: " + kwargs.get('page_size'))
+
         products = woocommerce.get(
             'products',
             params={
