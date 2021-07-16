@@ -151,15 +151,11 @@ class ImportWoocommerceProducts(models.TransientModel):
 
     def _filter_product_using_date(self, woocommerce, channel, **kwargs):
         vals_list = []
-        products = woocommerce.get(
-            'products',
-            params={
-                'after': kwargs.get('woocommerce_import_date_from'),
-                'page': kwargs.get('page'),
-                'per_page': kwargs.get('page_size'),
-                'order': 'asc' if kwargs.get("from_cron") else 'desc'
-            }
-        ).json()
+
+        product_import_date = kwargs.get("woocommerce_import_date_from").isoformat()
+        url = 'products?after={}&page={}&per_page={}&order=asc'.format(product_import_date,kwargs.get("page"),kwargs.get("page_size") )
+        products = woocommerce.get(url).json()
+
         try:
             vals_list = list(map(lambda x: self._get_product_dict(woocommerce, channel, x), products))
             if kwargs.get("from_cron"):

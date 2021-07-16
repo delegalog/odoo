@@ -78,17 +78,9 @@ class ImportWoocommerceOrders(models.TransientModel):
         return order_lines
 
     def _get_order_all(self, woocommerce, channel, **kwargs):
-        orders = woocommerce.get(
-            'orders',
-            params={
-                'page': kwargs.get('page'),
-                'per_page': kwargs.get('page_size'),
-                'order': 'asc'
-            }
-        ).json()
 
-        #url = 'orders?page={}&per_page={}&order=asc'.format(kwargs.get("page"), kwargs.get("page_size"))
-        #orders = woocommerce.get(url).json()
+        url = 'orders?page={}&per_page={}&order=asc'.format(kwargs.get("page"), kwargs.get("page_size"))
+        orders = woocommerce.get(url).json()
 
         if "message" in orders:
             raise UserError(f'Error in Getting Orders : {orders["message"]}')
@@ -96,19 +88,10 @@ class ImportWoocommerceOrders(models.TransientModel):
 
     def _filter_order_using_date(self, woocommerce, channel, **kwargs):
         vals_list = []
-        orders = woocommerce.get(
-            'orders',
-            params={
-                'after': kwargs.get('woocommerce_import_date_from'),
-                'page': kwargs.get('page'),
-                'per_page': kwargs.get('page_size'),
-                'order': 'asc' if kwargs.get("from_cron") else "desc"
-            }
-        ).json()
 
-        #import_order_date = kwargs.get("woocommerce_import_date_from").isoformat()
-        #url = 'orders?after={}&page={}&per_page={}&order=asc'.format(import_order_date, kwargs.get("page"), kwargs.get("page_size"))
-        #orders = woocommerce.get(url).json()
+        import_order_date = kwargs.get("woocommerce_import_date_from").isoformat()
+        url = 'orders?after={}&page={}&per_page={}&order=asc'.format(import_order_date, kwargs.get("page"), kwargs.get("page_size"))
+        orders = woocommerce.get(url).json()
         try:
             vals_list = list(map(lambda x: self._process_order(woocommerce, channel, x), orders))
             if kwargs.get("from_cron"):
