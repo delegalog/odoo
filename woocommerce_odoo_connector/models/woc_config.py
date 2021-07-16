@@ -235,7 +235,7 @@ class MultiChannelSale(models.Model):
 
 #----------------------------------- Core Methods -----------------------------------------------
     def woocommerce_post_do_transfer(self, stock_picking, mapping_ids, result):
-        self.woocommerce_set_order_status(order_id=mapping_ids.store_order_id, status='done')
+        self._woocommerce_set_order_status(order_id=mapping_ids.store_order_id, status='done')
 
     def woocommerce_post_confirm_paid(self, invoice, mapping_ids, result):
         self._woocommerce_set_order_status(order_id=mapping_ids.store_order_id, status='paid')
