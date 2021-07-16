@@ -24,14 +24,9 @@ class ImportWoocommerceShipping(models.TransientModel):
         return [self._get_shipping_vals(channel_id,shipping_data)]
 
     def _get_shipping_all(self,woocommerce ,channel_id, **kwargs):
-        shipping_data = woocommerce.get(
-            'shipping_methods',
-            params={
-                'page': kwargs.get('page'),
-                'per_page': kwargs.get('page_size'),
-                'order': 'asc',
-            },
-        ).json()
+        url = 'shipping_methods?page={}&per_page={}&order=asc'.format(kwargs.get("page"),kwargs.get("page_size"))
+        shipping_data = woocommerce.get(url).json()
+
         if "message" in shipping_data:
             raise UserError(f"Error in importing shipping : {shipping_data['message']}")
         return list(map(lambda x: self._get_shipping_vals(channel_id,x),shipping_data))
