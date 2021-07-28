@@ -18,15 +18,7 @@
 					</center>
 					<center>
 						<group>
-														<button
-								attrs= "{'invisible':['!',('channel','!=', 'csv'),('state','!=','validate')]}"
-								name="csv_odoo_bridge.action_import_csv_orders"
-								type="action"
-								class="oe_highlight wk_operation_btn box"
-								icon="fa-6x fa-shopping-cart"
-								help="It will import csv order data in Odoo">
-								<span> Import Order CSV</span> <span>453; <i class='fa fa-fw fa-cloud-upload' aria-label="Export Attributes" title="Export Attributes" role="img"/></span>
-							</button>
+
 
 						</group>
 					</center>
